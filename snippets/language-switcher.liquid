@@ -1,0 +1,73 @@
+{%- comment -%}
+  Custom language switcher - always visible
+  Shows AR / EN toggle in the header
+{%- endcomment -%}
+
+{%- assign current_locale = request.locale.iso_code -%}
+{%- assign root_url = request.origin -%}
+
+<div class="hams-lang-switcher">
+  <a href="#" class="hams-lang-btn{% if current_locale == 'ar' %} is-active{% endif %}" data-lang="ar" title="العربية">AR</a>
+  <span class="hams-lang-divider">|</span>
+  <a href="#" class="hams-lang-btn{% if current_locale == 'en' %} is-active{% endif %}" data-lang="en" title="English">EN</a>
+</div>
+
+{%- form 'localization', id: 'HamsLangForm', class: 'localization-form', data-language-switcher: '' -%}
+  <input type="hidden" name="locale_code" value="{{ current_locale }}" id="HamsLangInput">
+{%- endform -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var switcher = document.querySelector('.hams-lang-switcher');
+    var form = document.querySelector('[data-language-switcher]');
+    var input = document.getElementById('HamsLangInput');
+
+    if (!switcher || !form || !input) return;
+
+    switcher.addEventListener('click', function(e) {
+      e.preventDefault();
+      var btn = e.target.closest('.hams-lang-btn');
+      if (!btn || btn.classList.contains('is-active')) return;
+
+      var lang = btn.getAttribute('data-lang');
+      input.value = lang;
+      form.submit();
+    });
+  });
+</script>
+
+<style>
+  .hams-lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 12px;
+  }
+  .hams-lang-btn {
+    font-family: 'Cairo', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #7A7A7A;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    cursor: pointer;
+    line-height: 1.2;
+  }
+  .hams-lang-btn:hover {
+    color: #B85450;
+    background: rgba(184,84,80,0.06);
+  }
+  .hams-lang-btn.is-active {
+    color: #B85450;
+    background: rgba(184,84,80,0.1);
+    font-weight: 700;
+  }
+  .hams-lang-divider {
+    color: #ccc;
+    font-size: 11px;
+    user-select: none;
+  }
+</style>
