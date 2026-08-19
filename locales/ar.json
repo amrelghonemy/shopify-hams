@@ -84,8 +84,7 @@
       "secondary_button": "شاهدي المجموعات"
     },
     "featured_categories": {
-      "title": "تسوقي حسب الفئة",
-      "shop_now": "تسوقي الآن"
+      "title": "تسوقي حسب الفئة"
     },
     "new_arrivals": {
       "title": "وصل حديثاً",
@@ -2389,7 +2388,53 @@
         "custom_onsite_payment_method_modal": {
           "title": "تأكيد الدفع المخصص في الموقع"
         },
-        "markets_pro_disclaimer_label": "بتقديم طلبك، فإنك توافق على الشراء من Global-e بصفتها التاجر المسجّل، وفقاً لـ %{markets_pro_terms} و %{privacy_policy} الخاصة بـ Global-e، وتوافق على مشاركة معلوماتك مع %{shop_name}."
+        "markets_pro_disclaimer_label": "بتقديم طلبك، فإنك توافق على الشراء من Global-e بصفتها التاجر المسجّل، وفقاً لـ %{markets_pro_terms} و %{privacy_policy} الخاصة بـ Global-e، وتوافق على مشاركة معلوماتك مع %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "الشروط والأحكام",
+        "markets_pro_disclaimer_privacy_policy": "سياسة الخصوصية",
+        "markets_pro_disclaimer_terms_and_conditions_title": "شروط وأحكام التاجر المسجل",
+        "markets_pro_disclaimer_privacy_policy_title": "سياسة خصوصية التاجر المسجل",
+        "purchase_order_number": {
+          "title": "رقم أمر الشراء",
+          "label": "رقم طلب الشراء (اختياري)"
+        },
+        "alternative_payment_currency_total_notice": "ملاحظة: سيتم محاسبتك بمبلغ %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "ملاحظة: المبلغ الإجمالي المحوّل هو %{amount_due}.",
+        "waiting_on_taxes_message": "إذا لم يتم احتساب ضرائبك في غضون الثواني القليلة القادمة، فقم بتحديث الصفحة.",
+        "waiting_on_taxes_notice": "حساب الضرائب",
+        "payment_method": "طريقة الدفع",
+        "payment_method_rollup_accessibility_label": "خيارات طريقة الدفع",
+        "expired_payment_method": "وسيلة الدفع المختارة انتهت صلاحيتها",
+        "payment_method_update_failed": "فشل تحديث طريقة الدفع.",
+        "payment_method_incompatible_with_payment_terms": "طريقة الدفع غير متوافقة مع شروط الدفع.",
+        "proposed_gateway_unavailable": "بوابة الدفع المقترحة غير متاحة",
+        "pay_in_installments_split_pay_short": "4 دفعات بقيمة %{amount}",
+        "gift_cards_unavailable": "لا يمكن تطبيق بطاقة الهدية الخاصة بك على هذا الطلب وقد تمت إزالتها.",
+        "payment_flexibility_terms_id_mismatch": "عدم تطابق في معرّف شروط مرونة الدفع",
+        "payment_option": {
+          "accessibility_label": "اختر طريقة الدفع"
+        },
+        "bank_account_type": {
+          "checking": "جارٍ التحقق",
+          "savings": "المدخرات"
+        },
+        "new_bank_account_disclaimer": "بإكمالك للطلب، فإنك تفوّض %{shop_name} بخصم المبلغ والوقت الموضحين من الحساب أدناه عبر نظام غرفة المقاصة الآلية (ACH).",
+        "bank_account_disclaimer": "قد تستغرق دفعات غرفة المقاصة الآلية (ACH) ما يصل إلى 4 أيام عمل لإتمام معالجتها.",
+        "bank_account_choose": "اختر حسابًا لإتمام عملية الشراء بأمان",
+        "bank_account_connect_another": "ربط حساب مصرفي آخر",
+        "bank_account_connect": "ربط الحساب البنكي",
+        "bank_account_missing": "يجب ربط الحساب البنكي",
+        "bank_account_generic_error": "تعذرت إضافة الحساب البنكي. حاول مرة أخرى لاحقًا.",
+        "separate_payments_label": "منتجاتك من أكثر من متجر. ستتم محاسبتك في %{separate_payments_link}.",
+        "separate_payments_text": "مدفوعات منفصلة",
+        "payments": "المدفوعات",
+        "add_payment_method": "إضافة طريقة دفع",
+        "add_new_payment_method": "إضافة طريقة دفع جديدة",
+        "choose_new_payment_method": "اختر طريقة دفع جديدة",
+        "multiple_primary_payment_not_allowed": "طرق الدفع غير الصالحة",
+        "vault_for_payment_later": {
+          "pay_button_label": "تقديم طلب",
+          "notice": "لن يتم تحصيل الرسوم منك الآن. من خلال الاستمرار في الدفع، فإنك توافق على تحصيل الرسوم من طريقة الدفع الخاصة بك عند معالجة طلبك."
+        }
       },
       "field_errors": {
         "gift_card_depleted": "لا توجد أموال متبقية في بطاقة الهدايا هذه",
@@ -2524,7 +2569,48 @@
         "tips_invalid_tip_amount": "أدخل إكرامية أقل من %{amount}",
         "gift_card_already_applied": "تم تطبيق بطاقة الهدايا هذه على طلبك بالفعل",
         "gift_card_disabled": "بطاقة الهدايا هذه غير متاحة بعد الآن",
-        "gift_card_expired": "انتهت صلاحية بطاقة الهدايا هذه"
+        "gift_card_expired": "انتهت صلاحية بطاقة الهدايا هذه",
+        "handle_phone_invalid": "أدخل رقم هاتف صحيحًا",
+        "handle_email_invalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+        "email_invalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+        "email_or_phone_blank": "أدخل بريدًا إلكترونيًا أو رقم هاتف",
+        "email_or_phone_invalid": "أدخل بريدًا إلكترونيًا صحيحًا أو رقم هاتف جوال",
+        "address_first_name_blank": "أدخل الاسم الأول",
+        "address_first_name_too_long": "الاسم الأول طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+        "address_first_name_contains_emojis": "لا يمكن أن يحتوي الاسم الأول على رموز تعبيرية",
+        "address_first_name_contains_html_tags": "يجب ألا يحتوي الاسم الأول على وسوم HTML.",
+        "address_first_name_contains_url": "الاسم الأول لا يمكن أن يحتوي على رابط (URL)",
+        "address_first_name_contains_mathematical_symbols": "لا يمكن أن يحتوي الاسم الأول على رموز رياضية",
+        "address_last_name_blank": "أدخل اسم العائلة",
+        "address_last_name_too_long": "اسم العائلة طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+        "address_last_name_contains_emojis": "لا يمكن أن يحتوي اسم العائلة على رموز تعبيرية",
+        "address_last_name_contains_html_tags": ".لا يجوز أن يحتوي اسم العائلة على علامات HTML",
+        "address_last_name_contains_url": "لا يمكن أن يحتوي اسم العائلة على عنوان URL",
+        "address_last_name_contains_mathematical_symbols": "لا يمكن أن يحتوي اسم العائلة على رموز رياضية",
+        "address_address1_blank": "أدخل عنوانًا",
+        "address_address1_too_long": "السطر الأول من العنوان طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_address1_contains_emojis": "لا يمكن أن يحتوي العنوان1 على رموز تعبيرية",
+        "address_address1_contains_html_tags": "لا يمكن أن يتضمن العنوان الأول وسوم HTML.",
+        "address_address1_contains_mathematical_symbols": "لا يمكن أن يحتوي سطر العنوان الأول على رموز رياضية",
+        "address_street_name_blank": "أدخل اسم الشارع",
+        "address_street_name_too_long": "الشارع طويل جدًا (الحد الأقصى هو {{count}} حرف)",
+        "address_street_name_contains_emojis": "لا يمكن أن يتضمن الشارع رموزًا تعبيرية",
+        "address_street_name_contains_html_tags": "لا يمكن أن يحتوي حقل الشارع على وسوم HTML.",
+        "address_street_name_contains_mathematical_symbols": "لا يمكن أن يحتوي اسم الشارع على رموز رياضية",
+        "address_street_number_blank": "أدخل رقم المبنى",
+        "address_street_number_too_long": "رقم المبنى طويل جداً (الحد الأقصى هو {{count}} أحرف)",
+        "address_street_number_contains_emojis": "لا يمكن أن يشتمل رقم المبنى على رموز تعبيرية (إيموجي)",
+        "address_street_number_contains_html_tags": "لا يمكن أن يشتمل رقم المبنى على علامات HTML.",
+        "address_street_number_contains_mathematical_symbols": "لا يمكن أن يحتوي رقم المبنى على رموز رياضية",
+        "address_line2_blank": "أدخل شقة، جناح، إلخ.",
+        "address_line2_too_long": "<p dir=\"rtl\">سطر العنوان الثاني طويل جداً (الحد الأقصى هو {{count}} حرف)</p>",
+        "address_line2_contains_emojis": "سطر العنوان الثاني لا يمكن أن يحتوي على رموز تعبيرية",
+        "address_line2_contains_html_tags": "لا يمكن أن يحتوي سطر العنوان الثاني على وسوم HTML.",
+        "address_line2_contains_mathematical_symbols": "لا يمكن لسطر العنوان الثاني أن يحتوي على رموز رياضية",
+        "address_address2_blank": "أدخل شقة، جناح، إلخ.",
+        "address_address2_too_long": "سطر العنوان الثاني طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_address2_contains_emojis": "يجب ألا يتضمن العنوان 2 رموزًا تعبيرية",
+        "address_address2_contains_html_tags": "لا يمكن أن يحتوي حقل العنوان 2 على علامات HTML."
       },
       "store_credit_errors": {
         "generic_error": "حدثت مشكلة في رصيد المتجر الخاص بك. حاول مرة أخرى أو أعد تحميل الصفحة."
@@ -2606,6 +2692,35 @@
       },
       "address_management": {
         "saved_with_store": "تم الحفظ مع هذا المتجر"
+      },
+      "billing": {
+        "billing_address_title": "فاتورة إلى",
+        "billing_address_rollup_accessibility_label": "قائمة خيارات الفاتورة",
+        "same_as_shipping": "مطابق لعنوان الشحن",
+        "add_address": "استخدم عنواناً مختلفاً",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "address_more": "إجراءات أخرى لهذا العنوان",
+        "address_edit": "تعديل العنوان",
+        "address_delete": "حذف العنوان",
+        "address_confirm": "هل أنت متأكد أنك تريد حذف هذا العنوان من حسابك؟",
+        "address_form": {
+          "add_address": "أضف العنوان",
+          "save": "حفظ",
+          "cancel": "إلغاء"
+        }
+      },
+      "company_location": {
+        "location_title": "موقع الشركة",
+        "location_rollup_accessibility_label": "خيارات موقع الشركة"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "الرصيد الحالي %{amount}",
+        "credit_card_expires_on_notice": "تنتهي صلاحيته في %{month}/%{year}",
+        "express_payment_gateway_label": "عبر",
+        "manual_payment_gateway_label": "دليل",
+        "billing_address_title": "عنوان الفواتير",
+        "free_label": "مجاني"
       }
     },
     "pagination": {
