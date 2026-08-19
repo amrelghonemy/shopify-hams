@@ -1,28 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero-banner": {
       "type": "hero-banner",
-      "settings": {}
+      "settings": {
+        "hero_image": "shopify://shop_images/photo-1483985988355-763728e1935b_7bef32f1-bbb1-4f96-adbb-727065ac4545.avif",
+        "eyebrow": "",
+        "heading": "",
+        "description": "",
+        "primary_button_label": "",
+        "primary_button_link": "",
+        "secondary_button_label": "",
+        "secondary_button_link": ""
+      }
     },
     "featured-categories": {
       "type": "featured-categories",
-      "settings": {}
+      "settings": {
+        "title": "تسوقي حسب الفئة"
+      }
     },
     "new-arrivals": {
       "type": "new-arrivals",
-      "settings": {}
+      "settings": {
+        "title": "وصل حديثاً",
+        "collection": "",
+        "products_to_show": 4,
+        "view_all_label": "عرض الكل",
+        "view_all_link": ""
+      }
     },
     "promo-banner": {
       "type": "promo-banner",
-      "settings": {}
+      "settings": {
+        "tagline": "مجموعة حصرية",
+        "heading": "ارتقِ بإطلالتك اليومية",
+        "description": "قطع مختارة بعناية لتناسب كل لحظة.",
+        "button_label": "تسوقي الآن",
+        "button_link": ""
+      }
     },
     "why-us": {
       "type": "why-us",
-      "settings": {}
+      "settings": {
+        "title": "لماذا تختاريننا"
+      }
     },
     "instagram-feed": {
       "type": "instagram-feed",
-      "settings": {}
+      "settings": {
+        "heading": "تابعينا على انستقرام",
+        "description": "للحديث عن أحدث صيحات الموضة"
+      }
     }
   },
   "order": [
