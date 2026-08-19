@@ -291,7 +291,8 @@
       "title": "New Arrivals",
       "view_all": "View All",
       "quick_add": "Quick Add",
-      "wishlist": "Add to Wishlist"
+      "wishlist": "Add to Wishlist",
+      "badge_new": "New"
     },
     "promo_banner": {
       "tagline": "Exclusive Collection",
@@ -364,7 +365,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "built_with": "Built with"
     },
     "featured_blog": {
       "view_all": "View all",

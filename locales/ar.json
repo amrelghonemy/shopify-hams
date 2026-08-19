@@ -90,7 +90,8 @@
       "title": "وصل حديثاً",
       "view_all": "عرض الكل",
       "quick_add": "أضيفي للسلة",
-      "wishlist": "إضافة للمفضلة"
+      "wishlist": "إضافة للمفضلة",
+      "badge_new": "جديد"
     },
     "promo_banner": {
       "tagline": "مجموعة حصرية",
@@ -125,7 +126,8 @@
     },
     "footer": {
       "name": "التذييل",
-      "payment": "طرق الدفع"
+      "payment": "طرق الدفع",
+      "built_with": "صُنع بواسطة"
     },
     "announcements": {
       "previous_announcement": "الإعلان السابق",
