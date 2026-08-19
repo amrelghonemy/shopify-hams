@@ -1,40 +1,50 @@
+<section class="instagram-section">
+  <div class="container">
+    <div class="instagram-header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </div>
+    <div class="instagram-grid">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          <a href="{{ block.settings.link | default: '#' }}" class="insta-item" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
+            <div class="insta-overlay">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+        {% else %}
+          <div class="insta-item" {{ block.shopify_attributes }}>
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="follow-cta">
+      <a href="https://instagram.com" target="_blank">تابعينا</a>
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Instagram Feed",
   "tag": "section",
-  "class": "section-instagram",
+  "class": "section",
   "settings": [
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "@hamsstyle"
+      "default": "تابعينا على انستقرام"
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Follow us on Instagram for daily inspiration"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Top",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Bottom",
-      "default": 60
+      "default": "للحديث عن أحدث صيحات الموضة"
     }
   ],
   "blocks": [
@@ -59,143 +69,14 @@
     {
       "name": "Instagram Feed",
       "blocks": [
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        }
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
       ]
     }
   ]
 }
 {% endschema %}
-
-<div class="instagram-section" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="container">
-    <h2 class="instagram-heading">{{ section.settings.heading }}</h2>
-    {% if section.settings.description != blank %}
-      <p class="instagram-description">{{ section.settings.description }}</p>
-    {% endif %}
-    
-    <div class="instagram-grid">
-      {% for block in section.blocks %}
-        {% if block.settings.image %}
-          <a href="{{ block.settings.link | default: '#' }}" class="instagram-item" {{ block.shopify_attributes }}>
-            <img 
-              src="{{ block.settings.image | image_url: width: 400 }}" 
-              alt="{{ block.settings.image.alt | escape }}"
-              loading="lazy"
-            >
-            <div class="instagram-overlay">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
-              </svg>
-            </div>
-          </a>
-        {% else %}
-          <div class="instagram-item instagram-placeholder" {{ block.shopify_attributes }}>
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
-              <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-<style>
-.instagram-section {
-  background-color: var(--color-background);
-}
-
-.instagram-heading {
-  font-family: var(--font-heading-family);
-  font-size: 3.2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 0.8rem;
-  color: #3D3D3D;
-}
-
-.instagram-description {
-  text-align: center;
-  margin-bottom: 4rem;
-  color: #666;
-}
-
-.instagram-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.6rem;
-}
-
-@media screen and (max-width: 990px) {
-  .instagram-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 590px) {
-  .instagram-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.instagram-item {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  display: block;
-  background-color: #f5f5f5;
-}
-
-.instagram-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.instagram-item:hover img {
-  transform: scale(1.1);
-}
-
-.instagram-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(184, 84, 80, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: white;
-}
-
-.instagram-item:hover .instagram-overlay {
-  opacity: 1;
-}
-
-.instagram-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ccc;
-}
-</style>

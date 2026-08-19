@@ -1,14 +1,14 @@
-<section class="hams-promo">
-  <div class="page-width">
-    <div class="hams-promo__banner">
+<section class="promo-section">
+  <div class="container">
+    <div class="promo-banner">
       {% if section.settings.background_image != blank %}
-        <img src="{{ section.settings.background_image | image_url: width: 1200 }}" alt="" class="hams-promo__bg" loading="lazy">
+        <div class="promo-bg-img" style="background-image: url({{ section.settings.background_image | image_url: width: 1200 }});"></div>
       {% endif %}
-      <div class="hams-promo__content">
-        <p class="hams-promo__tagline">{{ section.settings.tagline }}</p>
-        <h2 class="hams-promo__heading">{{ section.settings.heading }}</h2>
-        <p class="hams-promo__desc">{{ section.settings.description }}</p>
-        <a href="{{ section.settings.button_link }}" class="hams-btn hams-btn--primary">{{ section.settings.button_label }}</a>
+      <div class="promo-content">
+        <p class="promo-tagline">{{ section.settings.tagline }}</p>
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.description }}</p>
+        <a href="{{ section.settings.button_link }}" class="btn-hero-primary">{{ section.settings.button_label }}</a>
       </div>
     </div>
   </div>

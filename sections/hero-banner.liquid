@@ -1,12 +1,13 @@
-<section class="hams-hero" style="background-image: url({{ section.settings.hero_image | image_url: width: 1600 }});">
-  <div class="hams-hero__overlay"></div>
-  <div class="hams-hero__content">
-    <p class="hams-hero__eyebrow">{{ section.settings.eyebrow }}</p>
-    <h1 class="hams-hero__heading">{{ section.settings.heading }}</h1>
-    <p class="hams-hero__desc">{{ section.settings.description }}</p>
-    <div class="hams-hero__buttons">
-      <a href="{{ section.settings.primary_button_link }}" class="hams-btn hams-btn--primary">{{ section.settings.primary_button_label }}</a>
-      <a href="{{ section.settings.secondary_button_link }}" class="hams-btn hams-btn--secondary">{{ section.settings.secondary_button_label }}</a>
+<section class="hero">
+  <div class="hero-bg" style="background-image: url({{ section.settings.hero_image | image_url: width: 1600 }});"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1>{{ section.settings.heading }}</h1>
+    <p class="hero-desc">{{ section.settings.description }}</p>
+    <div class="hero-buttons">
+      <a href="{{ section.settings.primary_button_link }}" class="btn-hero-primary">{{ section.settings.primary_button_label }}</a>
+      <a href="{{ section.settings.secondary_button_link }}" class="btn-hero-secondary">{{ section.settings.secondary_button_label }}</a>
     </div>
   </div>
 </section>

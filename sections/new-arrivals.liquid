@@ -1,43 +1,41 @@
-<section class="hams-arrivals">
-  <div class="page-width">
-    <div class="hams-arrivals__header">
-      <h2 class="hams-section-title">{{ section.settings.title }}</h2>
-      <a href="{{ section.settings.view_all_link }}" class="hams-view-all">
+<section class="arrivals-section">
+  <div class="container">
+    <div class="arrivals-header">
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+      <a href="{{ section.settings.view_all_link }}" class="view-all">
         {{ section.settings.view_all_label }}
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
-    <div class="hams-products-grid">
+    <div class="products-grid">
       {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
-        <a href="{{ product.url }}" class="hams-product-card">
-          <div class="hams-product-card__image-wrap">
+        <a href="{{ product.url }}" class="product-card">
+          <div class="product-image-wrap">
             {% if product.featured_image != blank %}
-              <img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.title }}" class="hams-product-card__image" loading="lazy">
+              <img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.title }}">
             {% else %}
-              <div class="hams-product-card__placeholder">{{ 'product-1' | placeholder_svg_tag }}</div>
+              {{ 'product-1' | placeholder_svg_tag }}
             {% endif %}
-            <div class="hams-product-card__overlay"></div>
+            <div class="product-hover-overlay"></div>
             
             {% if product.tags contains 'new' %}
-              <span class="hams-badge hams-badge--new">New</span>
+              <span class="product-badge badge-new">New</span>
             {% elsif product.compare_at_price > product.price %}
-              <span class="hams-badge hams-badge--sale">-{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price }}%</span>
+              <span class="product-badge badge-sale">-{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price }}%</span>
             {% endif %}
             
-            <div class="hams-product-card__actions">
-              <button type="submit" name="add" class="hams-quick-add" data-product-id="{{ product.id }}">
-                أضيفي للسلة
-              </button>
-              <button type="button" class="hams-wishlist-btn" data-product-id="{{ product.id }}">
+            <div class="product-hover-actions">
+              <button type="submit" name="add" class="quick-add">أضيفي للسلة</button>
+              <button type="button" class="wishlist-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14S1 10 1 5.5C1 3 3 1 5.5 1C7 1 8 2 8 2S9 1 10.5 1C13 1 15 3 15 5.5C15 10 8 14 8 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </div>
           </div>
-          <div class="hams-product-card__info">
-            <h4 class="hams-product-card__title">{{ product.title }}</h4>
+          <div class="product-info">
+            <h4 class="product-title">{{ product.title }}</h4>
             {% if product.metafields.reviews.rating %}
-              <div class="hams-product-card__rating">
-                <div class="hams-stars">
+              <div class="product-rating">
+                <div class="stars">
                   {% for i in (1..5) %}
                     {% if i <= product.metafields.reviews.rating %}
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="#FBBF24"><path d="M6 0L7.76 3.56L12 4.18L8.88 6.94L9.7 11.18L6 9.28L2.3 11.18L3.12 6.94L0 4.18L4.24 3.56L6 0Z"/></svg>
@@ -46,22 +44,22 @@
                     {% endif %}
                   {% endfor %}
                 </div>
-                <span class="hams-rating-count">({{ product.metafields.reviews.rating_count }})</span>
+                <span class="rating-count">({{ product.metafields.reviews.rating_count }})</span>
               </div>
             {% endif %}
-            <div class="hams-product-card__price">
-              <span class="hams-price--current">{{ product.price | money }}</span>
+            <div class="product-price">
+              <span class="price-current">{{ product.price | money }}</span>
               {% if product.compare_at_price > product.price %}
-                <span class="hams-price--original">{{ product.compare_at_price | money }}</span>
+                <span class="price-original">{{ product.compare_at_price | money }}</span>
               {% endif %}
             </div>
             {% if product.options.size > 0 and product.options[0] == 'Color' %}
-              <div class="hams-product-card__swatches">
+              <div class="product-swatches">
                 {% for option_value in product.options_by_name['Color'].values limit: 4 %}
-                  <span class="hams-swatch" style="background-color: {{ option_value }};"></span>
+                  <span class="swatch" style="background-color: {{ option_value }};"></span>
                 {% endfor %}
                 {% if product.options_by_name['Color'].values.size > 4 %}
-                  <span class="hams-swatch-more">+{{ product.options_by_name['Color'].values.size | minus: 4 }}</span>
+                  <span class="swatch-more">+{{ product.options_by_name['Color'].values.size | minus: 4 }}</span>
                 {% endif %}
               </div>
             {% endif %}

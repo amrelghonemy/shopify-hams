@@ -1,12 +1,12 @@
-<section class="hams-why">
-  <div class="page-width">
-    <div class="hams-section-header">
-      <h2 class="hams-section-title">{{ section.settings.title }}</h2>
+<section class="why-section">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title">{{ section.settings.title }}</h2>
     </div>
-    <div class="hams-why__grid">
+    <div class="why-grid">
       {% for block in section.blocks %}
-        <div class="hams-why-card" {{ block.shopify_attributes }}>
-          <div class="hams-why-card__icon">
+        <div class="why-card" {{ block.shopify_attributes }}>
+          <div class="why-icon">
             {% case block.settings.icon %}
               {% when 'shield' %}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -18,8 +18,8 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             {% endcase %}
           </div>
-          <h3 class="hams-why-card__title">{{ block.settings.title }}</h3>
-          <p class="hams-why-card__desc">{{ block.settings.description }}</p>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
         </div>
       {% endfor %}
     </div>
@@ -36,7 +36,7 @@
       "type": "text",
       "id": "title",
       "label": "Section Title",
-      "default": "لماذا تختارين 우리"
+      "default": "لماذا تختاريننا"
     }
   ],
   "blocks": [

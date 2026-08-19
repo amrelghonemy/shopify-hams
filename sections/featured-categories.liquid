@@ -1,24 +1,22 @@
-<section class="hams-categories">
-  <div class="page-width">
-    <div class="hams-section-header">
-      <h2 class="hams-section-title">{{ section.settings.title }}</h2>
+<section class="categories-section">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title">{{ section.settings.title }}</h2>
     </div>
-    <div class="hams-categories__grid">
+    <div class="categories-grid">
       {% for block in section.blocks %}
-        <a href="{{ block.settings.link }}" class="hams-category-card" {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.link }}" class="category-card" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}" class="hams-category-card__image" loading="lazy">
+            <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}">
           {% else %}
-            <div class="hams-category-card__placeholder">{{ 'collection-1' | placeholder_svg_tag }}</div>
+            {{ 'collection-1' | placeholder_svg_tag }}
           {% endif %}
-          <div class="hams-category-card__overlay"></div>
-          <div class="hams-category-card__hover">
+          <div class="category-overlay"></div>
+          <div class="category-hover-content">
             <h3>{{ block.settings.title }}</h3>
             <p>Shop Now</p>
           </div>
-          <div class="hams-category-card__default">
-            <h3>{{ block.settings.title }}</h3>
-          </div>
+          <div class="category-default-label"><h3>{{ block.settings.title }}</h3></div>
         </a>
       {% endfor %}
     </div>
@@ -68,10 +66,7 @@
       "blocks": [
         { "type": "category", "settings": { "title": "فساتين" } },
         { "type": "category", "settings": { "title": "بلوزات" } },
-        { "type": "category", "settings": { "title": "بناطيل" } },
-        { "type": "category", "settings": { "title": "طقم كامل" } },
-        { "type": "category", "settings": { "title": "عبايات" } },
-        { "type": "category", "settings": { "title": "إكسسوارات" } }
+        { "type": "category", "settings": { "title": "بناطيل" } }
       ]
     }
   ]
