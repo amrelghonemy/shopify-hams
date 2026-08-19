@@ -1,0 +1,590 @@
+{
+    "sections": {
+        "main": {
+            "type": "vitals-product-info",
+            "blocks": {
+                "product_media": {
+                    "type": "_vtls-product-media",
+                    "settings": {}
+                },
+                "details": {
+                    "type": "_vtls-details",
+                    "settings": {
+                        "gap": 16
+                    },
+                    "blocks": {
+                        "title": {
+                            "type": "_vtls-title",
+                            "settings": {}
+                        },
+                        "price": {
+                            "type": "_vtls-price",
+                            "settings": {
+                                "price_size": 18,
+                                "sale_badge_background": "#3D3D3D",
+                                "show_tax_note": false
+                            }
+                        },
+                        "badges": {
+                            "type": "_vtls-badges",
+                            "settings": {
+                                "badge_count": "1",
+                                "badge_1_icon": "fire",
+                                "badge_1_text": "Selling fast",
+                                "badge_1_text_color": "#e7500d",
+                                "badge_1_bg_color": "#fbebe4",
+                                "badge_1_border": "none",
+                                "badge_1_border_color": "#e7500d"
+                            }
+                        },
+                        "benefits": {
+                            "type": "_vtls-benefits",
+                            "settings": {
+                                "benefit_count": "3",
+                                "tagline": "{{ product.metafields.vitals.tagline.value }}",
+                                "benefit_1": "{{ product.metafields.vitals.top_benefit_1.value }}",
+                                "benefit_2": "{{ product.metafields.vitals.top_benefit_2.value }}",
+                                "benefit_3": "{{ product.metafields.vitals.top_benefit_3.value }}"
+                            }
+                        },
+                        "selectors": {
+                            "type": "_vtls-selectors",
+                            "settings": {},
+                            "blocks": {
+                                "variant_picker": {
+                                    "type": "_vtls-variant-picker",
+                                    "settings": {
+                                        "selected_border_color": ""
+                                    }
+                                },
+                                "quantity_selector": {
+                                    "type": "_vtls-quantity-selector",
+                                    "settings": {},
+                                    "disabled": true
+                                }
+                            },
+                            "block_order": [
+                                "variant_picker",
+                                "quantity_selector"
+                            ]
+                        },
+                        "buy_buttons": {
+                            "type": "_vtls-buy-buttons",
+                            "settings": {
+                                "show_dynamic_checkout": false
+                            }
+                        },
+                        "vitals_payment_logos": {
+                            "type": "shopify:\/\/apps\/vitals\/blocks\/payment-logos\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+                            "settings": {}
+                        },
+                        "product_tabs": {
+                            "type": "_vtls-product-tabs",
+                            "settings": {
+                                "number_of_tabs": "3",
+                                "tab_1_title": "\u0627\u0644\u0648\u0635\u0641",
+                                "tab_1_text": "{{ product.description }}",
+                                "tab_2_title": "\u0627\u0644\u0634\u062d\u0646",
+                                "tab_2_text": "<p>\u0646\u0648\u0644\u064a \u0639\u0646\u0627\u064a\u0629 \u0643\u0628\u064a\u0631\u0629 \u0641\u064a \u062a\u062c\u0647\u064a\u0632 \u0637\u0644\u0628\u0643 \u0648\u062a\u0633\u0644\u064a\u0645\u0647.<\/p><p><strong>\u0648\u0642\u062a \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629<\/strong><br\/>\u062a\u062a\u0645 \u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u0639\u0627\u062f\u0629 \u062e\u0644\u0627\u0644 1-3 \u0623\u064a\u0627\u0645 \u0639\u0645\u0644. \u0628\u0639\u062f \u0634\u062d\u0646 \u0637\u0644\u0628\u0643\u060c \u0633\u062a\u062a\u0644\u0642\u0649 \u0631\u0633\u0627\u0644\u0629 \u062a\u0623\u0643\u064a\u062f \u0634\u062d\u0646 \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a. \u0642\u062f \u064a\u062a\u0645 \u062a\u0636\u0645\u064a\u0646 \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0627\u0644\u062a\u062a\u0628\u0639 \u0639\u0646\u062f \u062a\u0648\u0641\u0631\u0647\u0627.<\/p><p><strong>\u0627\u0644\u0645\u062f\u0629 \u0627\u0644\u0645\u062a\u0648\u0642\u0639\u0629 \u0644\u0644\u062a\u0633\u0644\u064a\u0645<\/strong><br\/>\u062a\u0635\u0644 \u0645\u0639\u0638\u0645 \u0627\u0644\u0637\u0644\u0628\u0627\u062a \u062e\u0644\u0627\u0644 5-10 \u0623\u064a\u0627\u0645 \u0639\u0645\u0644. \u0642\u062f \u062a\u062e\u062a\u0644\u0641 \u0623\u0648\u0642\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u062d\u0633\u0628 \u0645\u0648\u0642\u0639\u0643 \u0648\u0627\u0644\u062c\u062f\u0648\u0644 \u0627\u0644\u062a\u0634\u063a\u064a\u0644\u064a \u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0634\u062d\u0646.<\/p><p><strong>\u0631\u0633\u0648\u0645 \u0627\u0644\u0634\u062d\u0646<\/strong><br\/>\u064a\u062a\u0645 \u0627\u062d\u062a\u0633\u0627\u0628 \u062a\u0643\u0627\u0644\u064a\u0641 \u0627\u0644\u0634\u062d\u0646 \u062a\u0644\u0642\u0627\u0626\u064a\u064b\u0627 \u0639\u0646\u062f \u0625\u062a\u0645\u0627\u0645 \u0627\u0644\u0634\u0631\u0627\u0621\u060c \u0628\u0646\u0627\u0621\u064b \u0639\u0644\u0649 \u0645\u0648\u0642\u0639\u0643 \u0648\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u0648\u0635\u064a\u0644 \u0627\u0644\u0645\u062d\u062f\u062f\u0629.<\/p>",
+                                "tab_3_title": "\u0627\u0644\u0625\u0631\u062c\u0627\u0639",
+                                "tab_3_text": "<p>\u0631\u0636\u0627\u0643 \u0647\u0648 \u0623\u0648\u0644\u0648\u064a\u062a\u0646\u0627 \u0627\u0644\u0642\u0635\u0648\u0649\u060c \u0648\u0646\u0631\u064a\u062f\u0643 \u0623\u0646 \u062a\u062a\u0633\u0648\u0651\u0642 \u0645\u0639\u0646\u0627 \u0628\u062b\u0642\u0629. \u0625\u0630\u0627 \u0643\u0627\u0646 \u0647\u0646\u0627\u0643 \u0623\u064a \u0634\u064a\u0621 \u063a\u064a\u0631 \u0645\u0646\u0627\u0633\u0628\u060c \u064a\u0645\u0643\u0646\u0643 \u0637\u0644\u0628 \u0625\u0631\u062c\u0627\u0639 \u0623\u0648 \u0627\u0633\u062a\u0631\u062f\u0627\u062f \u062e\u0644\u0627\u0644 30 \u064a\u0648\u0645\u064b\u0627 \u0645\u0646 \u062a\u0627\u0631\u064a\u062e \u0627\u0644\u062a\u0633\u0644\u064a\u0645.<\/p><p><strong>\u0643\u064a\u0641\u064a\u0629 \u0628\u062f\u0621 \u0639\u0645\u0644\u064a\u0629 \u0627\u0644\u0625\u0631\u062c\u0627\u0639<\/strong><br\/>\u0645\u0627 \u0639\u0644\u064a\u0643 \u0633\u0648\u0649 \u0627\u0644\u062a\u0648\u0627\u0635\u0644 \u0645\u0639 \u0641\u0631\u064a\u0642 \u0627\u0644\u062f\u0639\u0645 \u0644\u062f\u064a\u0646\u0627 \u0648\u0633\u0646\u0631\u0634\u062f\u0643 \u062e\u0644\u0627\u0644 \u0627\u0644\u0639\u0645\u0644\u064a\u0629. \u0648\u0633\u0646\u062a\u0623\u0643\u062f \u0645\u0646 \u0623\u0646 \u062a\u0643\u0648\u0646 \u0628\u0633\u064a\u0637\u0629 \u0648\u0628\u062f\u0648\u0646 \u0639\u0646\u0627\u0621.<\/p><p><strong>\u0627\u0633\u062a\u0631\u062f\u0627\u062f \u0627\u0644\u0623\u0645\u0648\u0627\u0644<\/strong><br\/>\u0628\u0645\u062c\u0631\u062f \u0645\u0639\u0627\u0644\u062c\u0629 \u0637\u0644\u0628 \u0627\u0644\u0625\u0631\u062c\u0627\u0639 \u0627\u0644\u062e\u0627\u0635 \u0628\u0643\u060c \u0633\u064a\u062a\u0645 \u0631\u062f \u0627\u0644\u0645\u0628\u0644\u063a \u0625\u0644\u0649 \u0648\u0633\u064a\u0644\u0629 \u0627\u0644\u062f\u0641\u0639 \u0627\u0644\u0623\u0635\u0644\u064a\u0629\u060c \u0639\u0627\u062f\u0629\u064b \u062e\u0644\u0627\u0644 5-10 \u0623\u064a\u0627\u0645 \u0639\u0645\u0644.<\/p>"
+                            }
+                        },
+                        "vitals_ub_product_bundles": {
+                            "type": "shopify:\/\/apps\/vitals\/blocks\/ub-product-bundles\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+                            "settings": {}
+                        }
+                    },
+                    "block_order": [
+                        "title",
+                        "price",
+                        "badges",
+                        "benefits",
+                        "selectors",
+                        "buy_buttons",
+                        "vitals_payment_logos",
+                        "product_tabs",
+                        "vitals_ub_product_bundles"
+                    ]
+                }
+            },
+            "block_order": [
+                "product_media",
+                "details"
+            ],
+            "settings": {
+                "custom_max_width": "1400",
+                "padding_top_mobile": 0,
+                "padding_bottom_mobile": 0
+            }
+        },
+        "benefits": {
+            "type": "vitals-ce7789ea",
+            "blocks": {
+                "icon_EFh33F": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "shield_alt",
+                        "font_awesome": "",
+                        "icon_title": "\u062f\u0641\u0639 \u0622\u0645\u0646",
+                        "icon_description": "\u0645\u062f\u0641\u0648\u0639\u0627\u062a \u0622\u0645\u0646\u0629 \u0648\u0633\u0647\u0644\u0629 \u0641\u064a \u0643\u0644 \u0645\u0631\u0629"
+                    }
+                },
+                "icon_KrwaUg": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "shipping_fast",
+                        "font_awesome": "",
+                        "icon_title": "\u0634\u062d\u0646 \u0633\u0631\u064a\u0639",
+                        "icon_description": "\u0627\u062d\u0635\u0644 \u0639\u0644\u0649 \u0637\u0644\u0628\u0643 \u0628\u0633\u0631\u0639\u0629"
+                    }
+                },
+                "icon_8QqKcB": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "headset",
+                        "font_awesome": "",
+                        "icon_title": "\u062f\u0639\u0645 \u0627\u0644\u0639\u0645\u0644\u0627\u0621",
+                        "icon_description": "\u0645\u0633\u0627\u0639\u062f\u0629 \u0648\u062f\u0648\u062f\u0629 \u0643\u0644\u0645\u0627 \u0627\u062d\u062a\u062c\u062a \u0625\u0644\u064a\u0647\u0627"
+                    }
+                },
+                "icon_qgMUAW": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "undo_alt",
+                        "font_awesome": "",
+                        "icon_title": "\u0625\u0631\u062c\u0627\u0639 \u0633\u0647\u0644",
+                        "icon_description": "\u062a\u0633\u0648\u0651\u0642 \u0628\u062b\u0642\u0629 \u0648\u0628\u062f\u0648\u0646 \u0639\u0646\u0627\u0621"
+                    }
+                }
+            },
+            "block_order": [
+                "icon_EFh33F",
+                "icon_KrwaUg",
+                "icon_8QqKcB",
+                "icon_qgMUAW"
+            ],
+            "name": "\ud83e\udde1 Vitals: Value Icons",
+            "settings": {
+                "icon_color": "#B85450",
+                "icon_size": 24,
+                "icon_title_size": "16",
+                "icon_title_color": "#3D3D3D",
+                "icon_description_size": "14",
+                "icon_description_color": "#3D3D3D",
+                "icons_per_row_desktop": 4,
+                "icons_mobile_layout": "2",
+                "space_between_icons": 24,
+                "space_between_rows": 64,
+                "space_between_rows_mobile": 40,
+                "heading": "",
+                "heading_size": "32",
+                "heading_style": "regular",
+                "heading_alignment": "center",
+                "heading_color": "#3D3D3D",
+                "section_background_style": "color",
+                "section_background": "#FCF9F8",
+                "section_background_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+                "section_background_animation": false,
+                "overlay_color": "#3D3D3D",
+                "overlay_opacity": 0,
+                "section_width": 100,
+                "section_max_width": "1200",
+                "spacing_type": "desktop",
+                "padding_top": 24,
+                "padding_bottom": 24,
+                "margin_top": 60,
+                "margin_bottom": 50,
+                "padding_top_mobile": 30,
+                "padding_bottom_mobile": 30,
+                "margin_top_mobile": 40,
+                "margin_bottom_mobile": 30
+            }
+        },
+        "image_with_text_1": {
+            "type": "vitals-664c7c40",
+            "blocks": {
+                "heading_TqgfWj": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "{{ product.metafields.vitals.image_with_text_1_title.value }}",
+                        "heading_size": "32",
+                        "heading_color": "#3D3D3D",
+                        "heading_alternative_font": false,
+                        "heading_font": "sans_serif_n4"
+                    }
+                },
+                "text_Urj8gc": {
+                    "type": "text",
+                    "settings": {
+                        "description": "<p>{{ product.metafields.vitals.image_with_text_1_description | metafield_tag }}<\/p>",
+                        "description_size": "16",
+                        "description_color": "#3D3D3D",
+                        "description_alternative_font": false,
+                        "description_font": "sans_serif_n4"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_TqgfWj",
+                "text_Urj8gc"
+            ],
+            "name": "\ud83e\udde1 Vitals: Image & Text - Simple",
+            "settings": {
+                "image_source_desktop": "upload",
+                "image_desktop": "{{ product.metafields.vitals.image_with_text_1_image.value }}",
+                "image_desktop_url": "",
+                "image_position": "left",
+                "aspect_ratio": "square",
+                "image_source_mobile": "upload",
+                "image_mobile_url": "",
+                "image_mobile_position": "above",
+                "text_alignment": "left",
+                "text_box_width": 65,
+                "text_box_background_style": "color",
+                "text_box_background": "#f9f9f9",
+                "text_box_background_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+                "enable_animation": false,
+                "border_color": "#3D3D3D",
+                "text_box_corner_radius": 0,
+                "section_background": "",
+                "overlay_color": "#3D3D3D",
+                "overlay_opacity": 0,
+                "layout_type": "desktop",
+                "section_width": 100,
+                "section_width_mobile": 100,
+                "section_max_width": "1200",
+                "padding_top": 0,
+                "padding_bottom": 0,
+                "margin_top": 50,
+                "margin_bottom": 40,
+                "padding_top_mobile": 0,
+                "padding_bottom_mobile": 0,
+                "margin_top_mobile": 30,
+                "margin_bottom_mobile": 30
+            }
+        },
+        "key_benefit_section": {
+            "type": "vitals-43e1018c",
+            "blocks": {
+                "icon_7FmKJN": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "star",
+                        "font_awesome": "<i class=\"fas fa-check\"><\/i>",
+                        "icon_title": "{{ product.metafields.vitals.key_benefit_1_title.value }}",
+                        "icon_description": "{{ product.metafields.vitals.key_benefit_1_description.value }}"
+                    }
+                },
+                "icon_zYkVdp": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "map_marker_alt",
+                        "font_awesome": "<i class=\"fas fa-check\"><\/i>",
+                        "icon_title": "{{ product.metafields.vitals.key_benefit_2_title.value }}",
+                        "icon_description": "{{ product.metafields.vitals.key_benefit_2_description.value }}"
+                    }
+                },
+                "icon_TWnjnd": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "none",
+                        "font_awesome": "<i class=\"fas fa-check\"><\/i>",
+                        "icon_title": "{{ product.metafields.vitals.key_benefit_3_title.value }}",
+                        "icon_description": "{{ product.metafields.vitals.key_benefit_3_description.value }}"
+                    }
+                },
+                "icon_FtUibb": {
+                    "type": "icon",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "none",
+                        "font_awesome": "<i class=\"fas fa-check\"><\/i>",
+                        "icon_title": "{{ product.metafields.vitals.key_benefit_4_title.value }}",
+                        "icon_description": "{{ product.metafields.vitals.key_benefit_4_description.value }}"
+                    }
+                }
+            },
+            "block_order": [
+                "icon_7FmKJN",
+                "icon_zYkVdp",
+                "icon_TWnjnd",
+                "icon_FtUibb"
+            ],
+            "name": "\ud83e\udde1 Vitals: Value Icons & Image",
+            "settings": {
+                "image": "{{ product.metafields.vitals.key_benefit_section_image.value }}",
+                "image_aspect_ratio": "square",
+                "image_corner_radius": 0,
+                "image_size": "medium",
+                "position_on_desktop": "center",
+                "position_on_mobile": "above",
+                "icon_color": "#B85450",
+                "icon_size": 24,
+                "icon_title_size": "16",
+                "icon_title_color": "#3D3D3D",
+                "icon_description_size": "14",
+                "icon_description_color": "#3D3D3D",
+                "icons_mobile_layout": "2",
+                "heading": "",
+                "heading_size": "32",
+                "heading_style": "regular",
+                "heading_alignment": "center",
+                "heading_color": "#3D3D3D",
+                "section_background_style": "color",
+                "section_background": "rgba(0,0,0,0)",
+                "section_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+                "enable_animation": false,
+                "overlay_color": "#3D3D3D",
+                "overlay_opacity": 0,
+                "section_width": 80,
+                "section_max_width": "",
+                "spacing_type": "desktop",
+                "padding_top": 0,
+                "padding_bottom": 0,
+                "margin_top": 40,
+                "margin_bottom": 40,
+                "padding_top_mobile": 0,
+                "padding_bottom_mobile": 0,
+                "margin_top_mobile": 10,
+                "margin_bottom_mobile": 20
+            }
+        },
+        "image_with_text_2": {
+            "type": "vitals-664c7c40",
+            "blocks": {
+                "heading_Na3bMx": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "{{ product.metafields.vitals.image_with_text_2_title.value }}",
+                        "heading_size": "32",
+                        "heading_color": "#3D3D3D",
+                        "heading_alternative_font": false,
+                        "heading_font": "sans_serif_n4"
+                    }
+                },
+                "text_cCTRtw": {
+                    "type": "text",
+                    "settings": {
+                        "description": "<p>{{ product.metafields.vitals.image_with_text_2_description | metafield_tag }}<\/p>",
+                        "description_size": "16",
+                        "description_color": "#3D3D3D",
+                        "description_alternative_font": false,
+                        "description_font": "sans_serif_n4"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_Na3bMx",
+                "text_cCTRtw"
+            ],
+            "name": "\ud83e\udde1 Vitals: Image & Text - Simple",
+            "settings": {
+                "image_source_desktop": "upload",
+                "image_desktop": "{{ product.metafields.vitals.image_with_text_2_image.value }}",
+                "image_desktop_url": "",
+                "image_position": "right",
+                "aspect_ratio": "square",
+                "image_source_mobile": "upload",
+                "image_mobile_url": "",
+                "image_mobile_position": "above",
+                "text_alignment": "left",
+                "text_box_width": 65,
+                "text_box_background_style": "color",
+                "text_box_background": "#f9f9f9",
+                "text_box_background_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+                "enable_animation": false,
+                "border_color": "#3D3D3D",
+                "text_box_corner_radius": 0,
+                "section_background": "rgba(0,0,0,0)",
+                "overlay_color": "#3D3D3D",
+                "overlay_opacity": 0,
+                "layout_type": "desktop",
+                "section_width": 100,
+                "section_width_mobile": 100,
+                "section_max_width": "1200",
+                "padding_top": 0,
+                "padding_bottom": 0,
+                "margin_top": 40,
+                "margin_bottom": 50,
+                "padding_top_mobile": 0,
+                "padding_bottom_mobile": 0,
+                "margin_top_mobile": 30,
+                "margin_bottom_mobile": 30
+            }
+        },
+        "vitals_product_reviews": {
+            "type": "apps",
+            "blocks": {
+                "vitals_product_reviews_aNr3Y3": {
+                    "type": "shopify:\/\/apps\/vitals\/blocks\/product-reviews\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+                    "settings": {
+                        "hide_mock_data": true
+                    }
+                }
+            },
+            "block_order": [
+                "vitals_product_reviews_aNr3Y3"
+            ],
+            "settings": {
+                "include_margins": true
+            }
+        },
+        "vitals_related_products": {
+            "type": "apps",
+            "blocks": {
+                "vitals_related_products_gcppJ6": {
+                    "type": "shopify:\/\/apps\/vitals\/blocks\/related-products\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "vitals_related_products_gcppJ6"
+            ],
+            "settings": {
+                "include_margins": true
+            }
+        },
+        "vitals_recently_viewed": {
+            "type": "apps",
+            "blocks": {
+                "vitals_recently_viewed_3e9nfq": {
+                    "type": "shopify:\/\/apps\/vitals\/blocks\/recently-viewed\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+                    "settings": {
+                        "hide_mock_data": false
+                    }
+                }
+            },
+            "block_order": [
+                "vitals_recently_viewed_3e9nfq"
+            ],
+            "settings": {
+                "include_margins": true
+            }
+        },
+        "faq": {
+            "type": "vitals-ba22cbbf",
+            "blocks": {
+                "heading_DVdaEi": {
+                    "type": "heading",
+                    "settings": {
+                        "title": "\u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0634\u0627\u0626\u0639\u0629"
+                    }
+                },
+                "question_pQyxJ8": {
+                    "type": "question",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "award",
+                        "font_awesome": "",
+                        "question": "{{ product.metafields.vitals.faq_1_question.value }}",
+                        "answer": "<p>{{ product.metafields.vitals.faq_1_answer | metafield_tag }}<\/p>",
+                        "buttonLabel": "",
+                        "buttonLink": "",
+                        "buttonStyle": "filled",
+                        "buttonTextColor": "#ffffff",
+                        "buttonColor": "#3D3D3D",
+                        "buttonBorderColor": "#3D3D3D",
+                        "buttonSize": "medium",
+                        "buttonCornerRadius": 4
+                    }
+                },
+                "question_6DrDWA": {
+                    "type": "question",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "hand-holding-heart",
+                        "font_awesome": "",
+                        "question": "{{ product.metafields.vitals.faq_2_question.value }}",
+                        "answer": "<p>{{ product.metafields.vitals.faq_2_answer | metafield_tag }}<\/p>",
+                        "buttonLabel": "",
+                        "buttonLink": "",
+                        "buttonStyle": "filled",
+                        "buttonTextColor": "#ffffff",
+                        "buttonColor": "#3D3D3D",
+                        "buttonBorderColor": "#3D3D3D",
+                        "buttonSize": "medium",
+                        "buttonCornerRadius": 4
+                    }
+                },
+                "question_GmMt6M": {
+                    "type": "question",
+                    "settings": {
+                        "icon_type": "icon",
+                        "icon": "thumbs-up",
+                        "font_awesome": "",
+                        "question": "{{ product.metafields.vitals.faq_3_question.value }}",
+                        "answer": "<p>{{ product.metafields.vitals.faq_3_answer | metafield_tag }}<\/p>",
+                        "buttonLabel": "",
+                        "buttonLink": "",
+                        "buttonStyle": "filled",
+                        "buttonTextColor": "#ffffff",
+                        "buttonColor": "#3D3D3D",
+                        "buttonBorderColor": "#3D3D3D",
+                        "buttonSize": "medium",
+                        "buttonCornerRadius": 4
+                    }
+                }
+            },
+            "block_order": [
+                "heading_DVdaEi",
+                "question_pQyxJ8",
+                "question_6DrDWA",
+                "question_GmMt6M"
+            ],
+            "name": "\ud83e\udde1 Vitals: FAQ & Icons",
+            "settings": {
+                "section_background_style": "color",
+                "generalBackgroundColor": "rgba(0,0,0,0)",
+                "section_background_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+                "section_background_animation": false,
+                "questionSpacing": 12,
+                "border_color": "rgba(0,0,0,0)",
+                "accordion_icon": "default",
+                "icon_color": "#B85450",
+                "icon_size": 24,
+                "corner_radius": 4,
+                "headingTextColor": "#3D3D3D",
+                "headingAlignment": "center",
+                "headingTextSize": "24",
+                "heading_style": "bold",
+                "questionTextColor": "#3D3D3D",
+                "questionBackgroundColor": "#FCF9F8",
+                "questionTextSize": "16",
+                "question_text_style": "regular",
+                "answerTextColor": "#3D3D3D",
+                "answerBackgroundColor": "#FCF9F8",
+                "answerTextSize": "16",
+                "overlay_color": "#3D3D3D",
+                "overlay_opacity": 0,
+                "spacing_type": "desktop",
+                "padding_top": 0,
+                "padding_bottom": 0,
+                "margin_top": 20,
+                "margin_bottom": 100,
+                "padding_top_mobile": 50,
+                "padding_bottom_mobile": 50,
+                "margin_top_mobile": 30,
+                "margin_bottom_mobile": 30
+            }
+        }
+    },
+    "order": [
+        "main",
+        "benefits",
+        "image_with_text_1",
+        "key_benefit_section",
+        "image_with_text_2",
+        "vitals_product_reviews",
+        "vitals_related_products",
+        "vitals_recently_viewed",
+        "faq"
+    ]
+}

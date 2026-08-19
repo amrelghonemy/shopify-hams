@@ -1,0 +1,86 @@
+<section class="hams-why">
+  <div class="page-width">
+    <div class="hams-section-header">
+      <h2 class="hams-section-title">{{ section.settings.title }}</h2>
+    </div>
+    <div class="hams-why__grid">
+      {% for block in section.blocks %}
+        <div class="hams-why-card" {{ block.shopify_attributes }}>
+          <div class="hams-why-card__icon">
+            {% case block.settings.icon %}
+              {% when 'shield' %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              {% when 'truck' %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              {% when 'credit-card' %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              {% when 'chat' %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            {% endcase %}
+          </div>
+          <h3 class="hams-why-card__title">{{ block.settings.title }}</h3>
+          <p class="hams-why-card__desc">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Why Choose Us",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "لماذا تختارين 우리"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "shield", "label": "Shield" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "credit-card", "label": "Credit Card" },
+            { "value": "chat", "label": "Chat" }
+          ],
+          "default": "shield"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "ضمان الجودة"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "منتجات مصنوعة من أجود الخامات بمعايير عالمية"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Us",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "shield", "title": "ضمان الجودة", "description": "منتجات مصنوعة من أجود الخامات بمعايير عالمية" } },
+        { "type": "feature", "settings": { "icon": "truck", "title": "الشحن المجاني", "description": "شحن مجاني لجميع الطلبات فوق 500 جنيه" } },
+        { "type": "feature", "settings": { "icon": "credit-card", "title": "الدفع الآمن", "description": "مدفوعات آمنة ومشفرة بأساليب متعددة" } },
+        { "type": "feature", "settings": { "icon": "chat", "title": "خدمة العملاء", "description": "فريق دعم متاح على مدار الساعة لمساعدتك" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

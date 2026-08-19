@@ -1,0 +1,127 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "أدخل المتجر بكلمة المرور:",
+      "login_password_button": "ادخل بكلمة المرور",
+      "login_form_password_label": "كلمة المرور",
+      "login_form_password_placeholder": "كلمة المرور",
+      "login_form_error": "كلمة المرور خاطئة!",
+      "login_form_submit": "ادخل",
+      "admin_link_html": "هل أنت صاحب المتجر؟ <a href=\"/admin\" class=\"link underlined-link\">سجل الدخول هنا</a>",
+      "powered_by_shopify_html": "هذا المتجر مدعوم بواسطة {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "شارك على فيسبوك",
+        "share_on_twitter": "شارك على تويتر",
+        "share_on_pinterest": "شارك على بينتيريست"
+      },
+      "links": {
+        "twitter": "تويتر",
+        "facebook": "فيسبوك",
+        "pinterest": "بينتيريست",
+        "instagram": "انستجرام",
+        "tumblr": "تامبلر",
+        "snapchat": "سناب شات",
+        "youtube": "يوتيوب",
+        "vimeo": "فيميو",
+        "tiktok": "تيك توك"
+      }
+    },
+    "continue_shopping": "متابعة التسوق",
+    "pagination": {
+      "label": "ترقيم الصفحات",
+      "page": "صفحة {{ number }}",
+      "next": "الصفحة التالية",
+      "previous": "الصفحة السابقة"
+    },
+    "search": {
+      "search": "بحث",
+      "reset": "مسح كلمة البحث"
+    },
+    "cart": {
+      "view": "عرض السلة ({{ count }})",
+      "view_empty_cart": "عرض السلة",
+      "item_added": "تمت إضافة المنتج إلى السلة"
+    },
+    "share": {
+      "close": "إغلاق المشاركة",
+      "copy_to_clipboard": "نسخ الرابط",
+      "share_url": "الرابط",
+      "share": "مشاركة",
+      "success_message": "تم نسخ الرابط"
+    },
+    "accessibility": {
+      "skip_to_text": "تخطي إلى المحتوى",
+      "link_messages": {
+        "new_window": "يتم فتح نافذة جديدة",
+        "external": "رابط خارجي"
+      },
+      "refresh_page": "تم تحديث الصفحة"
+    }
+  },
+  "sections": {
+    "header": {
+      "name": "الرأس"
+    },
+    "footer": {
+      "name": "التذييل"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "أضف إلى السلة",
+      "sold_out": "نفذ من المخزون",
+      "unavailable": "غير متاح",
+      "value_unavailable": "{{ option_value }} - غير متاح",
+      "price": {
+        "from_price_html": "من {{ price }}"
+      },
+      "media": {
+        "image_available": "الصورة {{ index }}"
+      }
+    },
+    "collection": {
+      "filter": "تصفية",
+      "filter_by": "تصفية حسب",
+      "clear": "مسح",
+      "apply": "تطبيق",
+      "sort": "ترتيب",
+      "sort_by": "ترتيب حسب",
+      "products": {
+        "count": {
+          "other": "{{ count }} منتجات",
+          "one": "{{ count }} منتج"
+        }
+      }
+    }
+  },
+  "sections": {
+    "cart": {
+      "cart_error": "حدث خطأ أثناء تحديث الكمية",
+      "cart_quantity_error_html": "لا يمكنك إضافة المزيد من {{ quantity }} إلى السلة"
+    },
+    "quick_order_list": {
+      "items_added": {
+        "other": "تمت إضافة {{ quantity }} منتجات",
+        "one": "تمت إضافة {{ quantity }} منتج"
+      },
+      "items_removed": {
+        "other": "تمت إزالة {{ quantity }} منتجات",
+        "one": "تمت إزالة {{ quantity }} منتج"
+      },
+      "view_cart": "عرض السلة",
+      "each": "{{ money }} للقطعة",
+      "min_error": "الحد الأدنى هو {{ min }}",
+      "max_error": "الحد الأقصى هو {{ max }}",
+      "step_error": "الخطوة هي {{ step }}"
+    },
+    "slideshow": {
+      "pause_slideshow": "إيقاف العرض",
+      "play_slideshow": "تشغيل العرض"
+    }
+  },
+  "localization": {
+    "country_results_count": "{{ count }} نتائج"
+  }
+}

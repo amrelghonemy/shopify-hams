@@ -1,0 +1,74 @@
+{{ 'custom-styles.css' | asset_url | stylesheet_tag }}
+
+<section class="hams-hero" style="background-image: url({{ section.settings.hero_image | image_url: width: 1600 }});">
+  <div class="hams-hero__overlay"></div>
+  <div class="hams-hero__content">
+    <p class="hams-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1 class="hams-hero__heading">{{ section.settings.heading }}</h1>
+    <p class="hams-hero__desc">{{ section.settings.description }}</p>
+    <div class="hams-hero__buttons">
+      <a href="{{ section.settings.primary_button_link }}" class="hams-btn hams-btn--primary">{{ section.settings.primary_button_label }}</a>
+      <a href="{{ section.settings.secondary_button_link }}" class="hams-btn hams-btn--secondary">{{ section.settings.secondary_button_label }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "مجموعة جديدة"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "أناقتك تبدأ من هنا"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "اكتشفي أحدث القطع المختارة بعناية لترقي أسلوبك اليومي"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primary Button Label",
+      "default": "تسوقي الآن"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secondary Button Label",
+      "default": "استكشفي المجموعة"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

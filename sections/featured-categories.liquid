@@ -1,0 +1,79 @@
+<section class="hams-categories">
+  <div class="page-width">
+    <div class="hams-section-header">
+      <h2 class="hams-section-title">{{ section.settings.title }}</h2>
+    </div>
+    <div class="hams-categories__grid">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}" class="hams-category-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}" class="hams-category-card__image" loading="lazy">
+          {% else %}
+            <div class="hams-category-card__placeholder">{{ 'collection-1' | placeholder_svg_tag }}</div>
+          {% endif %}
+          <div class="hams-category-card__overlay"></div>
+          <div class="hams-category-card__hover">
+            <h3>{{ block.settings.title }}</h3>
+            <p>Shop Now</p>
+          </div>
+          <div class="hams-category-card__default">
+            <h3>{{ block.settings.title }}</h3>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Categories",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "تسوقي حسب الفئة"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "فساتين"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Categories",
+      "blocks": [
+        { "type": "category", "settings": { "title": "فساتين" } },
+        { "type": "category", "settings": { "title": "بلوزات" } },
+        { "type": "category", "settings": { "title": "بناطيل" } },
+        { "type": "category", "settings": { "title": "طقم كامل" } },
+        { "type": "category", "settings": { "title": "عبايات" } },
+        { "type": "category", "settings": { "title": "إكسسوارات" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

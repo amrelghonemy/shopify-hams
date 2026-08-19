@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hams Style - Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --page-bg: #FEFCF9;
+  --header-bg: #FDF8F3;
+  --card-bg: #FFFFFF;
+  --primary: #B85450;
+  --primary-hover: #9A3E3B;
+  --rose-400: #DB7093;
+  --rose-200: #FFB6C1;
+  --rose-hover-bg: #FFE4E1;
+  --charcoal: #3D3D3D;
+  --charcoal-500: #7A7A7A;
+  --charcoal-400: #A0A0A0;
+  --hero-overlay-dark: #5c3a3a;
+  --hero-overlay-mid: #8c6262;
+  --hero-primary-btn: #c97b7b;
+  --hero-btn-hover: #b56868;
+  --hero-btn-text-hover: #a85c5c;
+  --hero-eyebrow: #f5e6e0;
+  --hero-desc-text: #fae8e4;
+  --category-text: #5c3a3a;
+  --category-shop: #fae8e4;
+  --promo-heading: #5c3a3a;
+  --promo-body: #8c6262;
+  --promo-btn: #c97b7b;
+  --promo-btn-hover: #b56868;
+  --feature-icon: #c97b7b;
+  --view-all: #c97b7b;
+  --view-all-hover: #a85c5c;
+  --icon-gradient-start: #f5e6e0;
+  --icon-gradient-end: #eeddd6;
+  --section-gradient: #fdf6f3;
+  --whatsapp: #25D366;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Cairo', sans-serif; color: var(--charcoal); background: var(--page-bg); line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* === ANIMATIONS === */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+
+/* === CONTAINER === */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+/* === ANNOUNCEMENT BAR === */
+.announcement-bar {
+  background: linear-gradient(90deg, rgba(255,228,225,0.8), rgba(245,198,198,0.6), rgba(255,228,225,0.8));
+  padding: 10px 0;
+  text-align: center;
+}
+.announcement-bar p {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--rose-400);
+  letter-spacing: 0.5px;
+}
+
+/* === HEADER === */
+.site-header {
+  background: var(--header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(201,123,123,0.08);
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { max-height: 60px; }
+.logo-text { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 24px; color: var(--primary); }
+.nav-links { display: flex; gap: 4px; align-items: center; }
+.nav-links a {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #5A5A5A;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+.nav-links a:hover { color: var(--rose-400); background: var(--rose-hover-bg); }
+.header-icons { display: flex; gap: 8px; align-items: center; }
+.icon-btn {
+  width: 40px; height: 40px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--charcoal-500);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+.icon-btn:hover { color: var(--rose-400); background: var(--rose-hover-bg); }
+.cart-badge {
+  position: absolute; top: -2px; right: -2px;
+  width: 18px; height: 18px;
+  background: var(--rose-400);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 9px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 3px rgba(219,112,147,0.3);
+}
+.hamburger { display: none; }
+
+/* === HERO === */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 600px;
+  max-height: 900px;
+  border-radius: 0 0 48px 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80') center/cover no-repeat;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(92,58,58,0.7) 0%, rgba(140,98,98,0.3) 50%, rgba(245,230,224,0.2) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 60px;
+  max-width: 672px;
+  animation: fadeIn 0.5s ease-out;
+}
+.hero-eyebrow {
+  font-weight: 300; font-size: 14px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--hero-eyebrow);
+  margin-bottom: 16px;
+}
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 72px;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  margin-bottom: 24px;
+}
+.hero-desc {
+  font-weight: 400; font-size: 18px;
+  color: var(--hero-desc-text);
+  max-width: 448px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-hero-primary {
+  display: inline-block;
+  background: var(--hero-primary-btn);
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500; font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: none; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(201,123,123,0.25);
+  transition: all 0.3s;
+}
+.btn-hero-primary:hover { background: var(--hero-btn-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,123,123,0.35); }
+.btn-hero-secondary {
+  display: inline-block;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--hero-overlay-mid);
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500; font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: none; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+.btn-hero-secondary:hover { background: #fff; transform: translateY(-2px); }
+
+/* === SECTION TITLE === */
+.section-title { font-size: 28px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em; }
+.section-subtitle { font-size: 14px; color: var(--charcoal-400); margin-top: 8px; }
+
+/* === SECTION 2: CATEGORIES === */
+.categories-section {
+  padding: 64px 0 96px;
+  background: linear-gradient(to bottom, var(--section-gradient), var(--page-bg));
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.category-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(212,165,165,0.1);
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+.category-card:hover { box-shadow: 0 8px 32px rgba(201,123,123,0.15); }
+.category-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s;
+}
+.category-card:hover img { transform: scale(1.05); }
+.category-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(92,58,58,0.6) 0%, rgba(140,98,98,0.1) 50%, transparent 100%);
+  opacity: 0; transition: opacity 0.4s;
+}
+.category-card:hover .category-overlay { opacity: 1; }
+.category-hover-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 24px;
+  transform: translateY(16px); opacity: 0;
+  transition: all 0.4s;
+}
+.category-card:hover .category-hover-content { transform: translateY(0); opacity: 1; }
+.category-hover-content h3 { font-weight: 700; font-size: 20px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.category-hover-content p { font-size: 12px; color: var(--category-shop); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 4px; }
+.category-default-label {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(4px);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: opacity 0.4s;
+}
+.category-card:hover .category-default-label { opacity: 0; }
+.category-default-label h3 { font-weight: 700; font-size: 16px; color: var(--category-text); }
+
+/* === SECTION 3: NEW ARRIVALS === */
+.arrivals-section { padding: 48px 0 64px; }
+.arrivals-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.view-all {
+  display: flex; align-items: center; gap: 6px;
+  font-weight: 500; font-size: 14px; color: var(--view-all);
+  transition: color 0.3s;
+}
+.view-all:hover { color: var(--view-all-hover); }
+.view-all i { transition: transform 0.3s; width: 16px; height: 16px; }
+.view-all:hover i { transform: translateX(-4px); }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.product-card { display: block; }
+.product-image-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fdf2f0;
+  box-shadow: 0 4px 20px rgba(219,166,166,0.15);
+  transition: box-shadow 0.4s;
+}
+.product-card:hover .product-image-wrap { box-shadow: 0 8px 32px rgba(219,166,166,0.25); }
+.product-image-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.7s;
+}
+.product-card:hover .product-image-wrap img { transform: scale(1.10); }
+.product-hover-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+  opacity: 0; transition: opacity 0.4s;
+}
+.product-card:hover .product-hover-overlay { opacity: 1; }
+.product-hover-actions {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px;
+  display: flex; gap: 8px;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+}
+.product-card:hover .product-hover-actions { transform: translateY(0); }
+.quick-add {
+  flex: 1;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  color: var(--primary);
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600; font-size: 12px;
+  padding: 10px 0;
+  border-radius: 9999px;
+  border: none; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+.quick-add:hover { background: var(--rose-400); color: #fff; }
+.wishlist-btn {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  border: none; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--charcoal-500);
+  transition: all 0.3s;
+}
+.wishlist-btn:hover { color: var(--rose-400); }
+.product-badge {
+  position: absolute; top: 12px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: #fff;
+}
+.badge-new { left: 12px; background: var(--rose-400); }
+.badge-sale { right: 12px; background: var(--primary); }
+.badge-bestseller { left: 12px; background: #9B72CF; }
+.product-info { padding: 12px 4px 0; }
+.product-title {
+  font-weight: 600; font-size: 14px; color: var(--charcoal);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: color 0.3s;
+}
+.product-card:hover .product-title { color: var(--rose-400); }
+.product-rating { display: flex; align-items: center; gap: 4px; margin-top: 6px; }
+.stars { display: flex; gap: 1px; }
+.stars i { font-size: 12px; color: #FBBF24; }
+.stars i.empty { color: #F5C6C6; }
+.rating-count { font-size: 10px; color: var(--charcoal-400); }
+.product-price { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.price-current { font-weight: 700; font-size: 14px; color: var(--primary); }
+.price-original { font-weight: 400; font-size: 12px; color: var(--charcoal-400); text-decoration: line-through; }
+.product-swatches { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
+.swatch {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.swatch-more { font-size: 10px; color: var(--charcoal-400); }
+
+/* === SECTION 4: PROMO BANNER === */
+.promo-section { padding: 32px 0 48px; }
+.promo-banner {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f5e6e0, #eeddd6, #e8ccc2);
+  box-shadow: 0 10px 40px rgba(201,123,123,0.1);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.promo-bg-img {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=60') center/cover;
+  opacity: 0.15;
+}
+.promo-content {
+  position: relative; z-index: 1;
+  padding: 48px 32px;
+}
+.promo-tagline {
+  font-weight: 500; font-size: 14px;
+  color: var(--hero-btn-text-hover);
+  letter-spacing: 0.2em; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.promo-content h2 {
+  font-weight: 700; font-size: 36px;
+  color: var(--promo-heading);
+  margin-bottom: 12px;
+}
+.promo-content p {
+  font-weight: 400; font-size: 16px;
+  color: var(--promo-body);
+  max-width: 512px; margin: 0 auto 32px;
+}
+
+/* === SECTION 5: WHY US === */
+.why-section {
+  padding: 64px 0 96px;
+  background: linear-gradient(to bottom, var(--page-bg), var(--section-gradient));
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.why-card {
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 20px rgba(212,165,165,0.1);
+  transition: all 0.4s;
+}
+.why-card:hover { box-shadow: 0 8px 32px rgba(201,123,123,0.15); transform: translateY(-4px); }
+.why-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--icon-gradient-start), var(--icon-gradient-end));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px; color: var(--feature-icon);
+  transition: all 0.3s;
+}
+.why-card:hover .why-icon { background: var(--feature-icon); color: #fff; }
+.why-card h3 { font-weight: 600; font-size: 14px; color: var(--category-text); margin-bottom: 8px; }
+.why-card p { font-weight: 400; font-size: 12px; color: var(--promo-body); line-height: 1.7; }
+
+/* === SECTION 6: INSTAGRAM === */
+.instagram-section {
+  padding: 64px 0 96px;
+  background: linear-gradient(to bottom, var(--page-bg), var(--section-gradient));
+}
+.instagram-header { text-align: center; margin-bottom: 32px; }
+.instagram-header h2 { font-weight: 700; font-size: 28px; color: var(--charcoal); }
+.instagram-header p { font-size: 14px; color: var(--charcoal-400); margin-top: 8px; }
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 0 32px;
+}
+.insta-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(212,165,165,0.1);
+  transition: box-shadow 0.4s;
+}
+.insta-item:hover { box-shadow: 0 8px 32px rgba(201,123,123,0.2); }
+.insta-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s;
+}
+.insta-item:hover img { transform: scale(1.10); }
+.insta-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(201,123,123,0.5), transparent);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.4s;
+}
+.insta-item:hover .insta-overlay { opacity: 1; }
+.insta-overlay i { font-size: 32px; color: #fff; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)); }
+.follow-cta {
+  text-align: center; margin-top: 32px;
+}
+.follow-cta a {
+  display: inline-block;
+  font-weight: 500; font-size: 14px;
+  color: var(--feature-icon);
+  padding: 10px 24px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(201,123,123,0.3);
+  transition: all 0.3s;
+}
+.follow-cta a:hover {
+  border-color: rgba(201,123,123,0.6);
+  background: rgba(245,230,224,0.5);
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: var(--header-bg);
+  border-top: 1px solid rgba(201,123,123,0.1);
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 48px;
+}
+.footer-col h4 {
+  font-weight: 600; font-size: 14px;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.footer-col p {
+  font-weight: 400; font-size: 14px;
+  color: var(--charcoal-500);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul a {
+  font-weight: 400; font-size: 14px;
+  color: var(--charcoal-500);
+  transition: color 0.3s;
+}
+.footer-col ul a:hover { color: var(--rose-400); }
+.social-links { display: flex; gap: 12px; }
+.social-link {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1.5px solid #F5E6D3;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--charcoal-500);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.social-link:hover { background: var(--rose-400); border-color: var(--rose-400); color: #fff; }
+.newsletter-form { display: flex; gap: 8px; margin-top: 16px; }
+.newsletter-input {
+  flex: 1;
+  border-radius: 9999px;
+  border: 1.5px solid #F5E6D3;
+  padding: 12px 20px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  background: var(--card-bg);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.newsletter-input:focus { border-color: var(--rose-400); }
+.newsletter-btn {
+  border-radius: 9999px;
+  background: var(--rose-400);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500; font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.newsletter-btn:hover { background: var(--hero-primary-btn); }
+.footer-bottom {
+  border-top: 1px solid rgba(201,123,123,0.1);
+  margin-top: 48px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom p { font-size: 12px; color: var(--charcoal-400); margin: 0; }
+.footer-bottom-links { display: flex; gap: 16px; }
+.footer-bottom-links a { font-size: 12px; color: var(--charcoal-400); transition: color 0.3s; }
+.footer-bottom-links a:hover { color: var(--rose-400); }
+
+/* === WHATSAPP === */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 56px; height: 56px;
+  background: var(--whatsapp);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+  z-index: 40;
+  transition: all 0.3s;
+  color: #fff;
+  font-size: 28px;
+}
+.whatsapp-btn:hover {
+  background: #20bd5a;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.45);
+  transform: scale(1.1);
+}
+
+/* === LANGUAGE SWITCHER === */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--rose-200);
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 36px;
+  margin: 0 8px;
+}
+.lang-switch button {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0 14px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: transparent;
+  color: var(--charcoal-500);
+}
+.lang-switch button.active {
+  background: var(--rose-400);
+  color: #fff;
+}
+.lang-switch button:hover:not(.active) {
+  color: var(--rose-400);
+}
+
+/* === LANGUAGE TOGGLE VISIBILITY === */
+[data-lang="ar"] .en { display: none !important; }
+[data-lang="en"] .ar { display: none !important; }
+[data-lang="en"] .en { display: inline !important; }
+[data-lang="ar"] .ar { display: inline !important; }
+[data-lang="en"] .en-block { display: block !important; }
+[data-lang="ar"] .en-block { display: none !important; }
+[data-lang="en"] .ar-block { display: none !important; }
+[data-lang="ar"] .ar-block { display: block !important; }
+[data-lang="en"] .en-flex { display: flex !important; }
+[data-lang="ar"] .en-flex { display: none !important; }
+[data-lang="ar"] .ar-flex { display: flex !important; }
+[data-lang="en"] .ar-flex { display: none !important; }
+
+/* RTL/LTR layout adjustments */
+html[dir="ltr"] .nav-links { flex-direction: row-reverse; }
+html[dir="ltr"] .header-inner { flex-direction: row-reverse; }
+html[dir="ltr"] .hero-content { text-align: left; padding-left: 60px; padding-right: 0; }
+html[dir="ltr"] .footer-grid { direction: ltr; }
+html[dir="ltr"] .category-default-label { left: 50%; transform: translateX(-50%); }
+html[dir="ltr"] .badge-new { left: auto; right: 12px; }
+html[dir="ltr"] .badge-sale { right: auto; left: 12px; }
+html[dir="ltr"] .badge-bestseller { left: auto; right: 12px; }
+html[dir="ltr"] .product-swatches { direction: ltr; }
+html[dir="ltr"] .hero-buttons { direction: ltr; }
+html[dir="ltr"] .footer-bottom { direction: ltr; }
+html[dir="ltr"] .footer-bottom-links { direction: ltr; }
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-desc { font-size: 16px; }
+  .hero-content { padding: 0 24px; }
+  .hero-buttons { flex-direction: column; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .instagram-grid { grid-template-columns: repeat(3, 1fr); padding: 0 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .promo-content h2 { font-size: 24px; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content h1 { font-size: 60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <div class="container">
+    <p><span class="ar">شحن مجاني للطلبات فوق 500 جنيه</span><span class="en">Free shipping on orders over 500 EGP</span></p>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="nav-links">
+      <a href="#"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+      <a href="#"><span class="ar">التسوق</span><span class="en">Shop</span></a>
+      <a href="#"><span class="ar">وصل حديثاً</span><span class="en">New Arrivals</span></a>
+      <a href="#"><span class="ar">الأكثر مبيعاً</span><span class="en">Best Sellers</span></a>
+      <a href="#"><span class="ar">العروض</span><span class="en">Sale</span></a>
+      <a href="#"><span class="ar">من نحن</span><span class="en">About Us</span></a>
+      <a href="#"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="header-icons">
+      <div class="lang-switch">
+        <button class="active" onclick="switchLang('ar')">AR</button>
+        <button onclick="switchLang('en')">EN</button>
+      </div>
+      <button class="icon-btn hamburger"><i class="fas fa-bars"></i></button>
+      <button class="icon-btn"><i class="fas fa-search"></i></button>
+      <button class="icon-btn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+    <a href="#" class="logo-text">HAMS STYLE</a>
+  </div>
+</header>
+
+<!-- SECTION 1: HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow"><span class="ar">مجموعة جديدة</span><span class="en">New Collection</span></p>
+    <h1><span class="ar">أناقتك تبدأ من هنا</span><span class="en">Style Made for You</span></h1>
+    <p class="hero-desc"><span class="ar">اكتشفي أحدث القطع المختارة بعناية لترقي أسلوبك اليومي</span><span class="en">Discover the latest pieces curated to elevate your everyday style.</span></p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-hero-primary"><span class="ar">تسوقي الآن</span><span class="en">Shop Now</span></a>
+      <a href="#" class="btn-hero-secondary"><span class="ar">استكشفي المجموعة</span><span class="en">Explore Collection</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: CATEGORIES -->
+<section class="categories-section">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title"><span class="ar">تسوقي حسب الفئة</span><span class="en">Shop by Category</span></h2>
+    </div>
+    <div class="categories-grid">
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80" alt="Dresses">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">فساتين</span><span class="en">Dresses</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">فساتين</span><span class="en">Dresses</span></h3></div>
+      </a>
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600&q=80" alt="Tops">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">بلوزات</span><span class="en">Tops</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">بلوزات</span><span class="en">Tops</span></h3></div>
+      </a>
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80" alt="Pants">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">بناطيل</span><span class="en">Pants</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">بناطيل</span><span class="en">Pants</span></h3></div>
+      </a>
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Sets">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">طقم كامل</span><span class="en">Sets</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">طقم كامل</span><span class="en">Sets</span></h3></div>
+      </a>
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80" alt="Outerwear">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">عبايات</span><span class="en">Outerwear</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">عبايات</span><span class="en">Outerwear</span></h3></div>
+      </a>
+      <a href="#" class="category-card">
+        <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&q=80" alt="Accessories">
+        <div class="category-overlay"></div>
+        <div class="category-hover-content">
+          <h3><span class="ar">إكسسوارات</span><span class="en">Accessories</span></h3>
+          <p>Shop Now</p>
+        </div>
+        <div class="category-default-label"><h3><span class="ar">إكسسوارات</span><span class="en">Accessories</span></h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: NEW ARRIVALS -->
+<section class="arrivals-section">
+  <div class="container">
+    <div class="arrivals-header">
+      <h2 class="section-title"><span class="ar">وصل حديثاً</span><span class="en">New Arrivals</span></h2>
+      <a href="#" class="view-all"><span class="ar">عرض الكل</span><span class="en">View All</span> <i class="fas fa-arrow-left"></i></a>
+    </div>
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <a href="#" class="product-card">
+        <div class="product-image-wrap">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Product">
+          <div class="product-hover-overlay"></div>
+          <span class="product-badge badge-new">New</span>
+          <div class="product-hover-actions">
+            <button class="quick-add"><span class="ar">أضيفي للسلة</span><span class="en">Quick Add</span></button>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h4 class="product-title"><span class="ar">فستان صيفي بنقشة بولكا</span><span class="en">Polka Dot Summer Dress</span></h4>
+          <div class="product-rating">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <span class="rating-count">(24)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">899 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+            <span class="price-original">1,199 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch" style="background:#5c3a3a"></span>
+            <span class="swatch" style="background:#f5c6c6"></span>
+            <span class="swatch" style="background:#fdf8f3"></span>
+          </div>
+        </div>
+      </a>
+      <!-- Product 2 -->
+      <a href="#" class="product-card">
+        <div class="product-image-wrap">
+          <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=500&q=80" alt="Product">
+          <div class="product-hover-overlay"></div>
+          <span class="product-badge badge-bestseller"><span class="ar">الأكثر مبيعاً</span><span class="en">Bestseller</span></span>
+          <div class="product-hover-actions">
+            <button class="quick-add"><span class="ar">أضيفي للسلة</span><span class="en">Quick Add</span></button>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h4 class="product-title"><span class="ar">بلوزة حرير مطرزة</span><span class="en">Embroidered Silk Blouse</span></h4>
+          <div class="product-rating">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <span class="rating-count">(18)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">549 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch" style="background:#db7093"></span>
+            <span class="swatch" style="background:#fdf8f3"></span>
+            <span class="swatch" style="background:#9b72cf"></span>
+            <span class="swatch-more">+2</span>
+          </div>
+        </div>
+      </a>
+      <!-- Product 3 -->
+      <a href="#" class="product-card">
+        <div class="product-image-wrap">
+          <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&q=80" alt="Product">
+          <div class="product-hover-overlay"></div>
+          <span class="product-badge badge-sale">-30%</span>
+          <div class="product-hover-actions">
+            <button class="quick-add"><span class="ar">أضيفي للسلة</span><span class="en">Quick Add</span></button>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h4 class="product-title"><span class="ar">بنطلون كاجوال قطني</span><span class="en">Casual Cotton Pants</span></h4>
+          <div class="product-rating">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star empty"></i></div>
+            <span class="rating-count">(12)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">349 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+            <span class="price-original">499 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch" style="background:#3d3d3d"></span>
+            <span class="swatch" style="background:#f5e6d3"></span>
+          </div>
+        </div>
+      </a>
+      <!-- Product 4 -->
+      <a href="#" class="product-card">
+        <div class="product-image-wrap">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=80" alt="Product">
+          <div class="product-hover-overlay"></div>
+          <span class="product-badge badge-new">New</span>
+          <div class="product-hover-actions">
+            <button class="quick-add"><span class="ar">أضيفي للسلة</span><span class="en">Quick Add</span></button>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h4 class="product-title"><span class="ar">عباية مودرن بتطريز</span><span class="en">Modern Embroidered Abaya</span></h4>
+          <div class="product-rating">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <span class="rating-count">(31)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">1,299 <span class="ar">ج.م</span><span class="en">EGP</span></span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch" style="background:#3d3d3d"></span>
+            <span class="swatch" style="background:#5c3a3a"></span>
+            <span class="swatch" style="background:#8c6262"></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: PROMO BANNER -->
+<section class="promo-section">
+  <div class="container">
+    <div class="promo-banner">
+      <div class="promo-bg-img"></div>
+      <div class="promo-content">
+        <p class="promo-tagline"><span class="ar">مجموعة حصرية</span><span class="en">Exclusive Collection</span></p>
+        <h2><span class="ar">ارتقِ بإطلالتك اليومية</span><span class="en">Elevate Your Everyday Style</span></h2>
+        <p><span class="ar">قطع مختارة بعناية لتناسب كل لحظة.</span><span class="en">Carefully curated pieces to suit every moment.</span></p>
+        <a href="#" class="btn-hero-primary"><span class="ar">تسوقي الآن</span><span class="en">Shop Now</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: WHY US -->
+<section class="why-section">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title"><span class="ar">لماذا تختارين 우리</span><span class="en">Why Choose Us</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3><span class="ar">ضمان الجودة</span><span class="en">Quality Guarantee</span></h3>
+        <p><span class="ar">منتجات مصنوعة من أجود الخامات بمعايير عالمية</span><span class="en">Products made from the finest materials with global standards</span></p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-truck"></i></div>
+        <h3><span class="ar">الشحن المجاني</span><span class="en">Free Shipping</span></h3>
+        <p><span class="ar">شحن مجاني لجميع الطلبات فوق 500 جنيه</span><span class="en">Free shipping on all orders over 500 EGP</span></p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-credit-card"></i></div>
+        <h3><span class="ar">الدفع الآمن</span><span class="en">Secure Payment</span></h3>
+        <p><span class="ar">مدفوعات آمنة ومشفرة بأساليب متعددة</span><span class="en">Secure and encrypted payments with multiple methods</span></p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-comments"></i></div>
+        <h3><span class="ar">خدمة العملاء</span><span class="en">Customer Service</span></h3>
+        <p><span class="ar">فريق دعم متاح على مدار الساعة لمساعدتك</span><span class="en">Support team available 24/7 to help you</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: INSTAGRAM -->
+<section class="instagram-section">
+  <div class="container">
+    <div class="instagram-header">
+      <h2><span class="ar">تابعينا على انستقرام</span><span class="en">Follow Us on Instagram</span></h2>
+      <p><span class="ar">للحديث عن أحدث صيحات الموضة</span><span class="en">Stay updated with the latest trends</span></p>
+    </div>
+    <div class="instagram-grid">
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=300&q=80" alt="Instagram">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+    <div class="follow-cta">
+      <a href="#"><span class="ar">تابعينا</span><span class="en">Follow Us</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="logo-text" style="font-size:20px;">HAMS STYLE</span>
+        <p><span class="ar">ملابس وإكسسوارات مصممة للراحة والثقة والأناقة في حياتك اليومية.</span><span class="en">Clothing and accessories designed for comfort, confidence, and elegance in your everyday life.</span></p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="ar">روابط سريعة</span><span class="en">Quick Links</span></h4>
+        <ul>
+          <li><a href="#"><span class="ar">الرئيسية</span><span class="en">Home</span></a></li>
+          <li><a href="#"><span class="ar">التسوق</span><span class="en">Shop</span></a></li>
+          <li><a href="#"><span class="ar">وصل حديثاً</span><span class="en">New Arrivals</span></a></li>
+          <li><a href="#"><span class="ar">الأكثر مبيعاً</span><span class="en">Best Sellers</span></a></li>
+          <li><a href="#"><span class="ar">العروض</span><span class="en">Sale</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="ar">خدمة العملاء</span><span class="en">Customer Service</span></h4>
+        <ul>
+          <li><a href="#"><span class="ar">من نحن</span><span class="en">About Us</span></a></li>
+          <li><a href="#"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a></li>
+          <li><a href="#"><span class="ar">الأسئلة الشائعة</span><span class="en">FAQ</span></a></li>
+          <li><a href="#"><span class="ar">سياسة الشحن</span><span class="en">Shipping Policy</span></a></li>
+          <li><a href="#"><span class="ar">سياسة الإرجاع</span><span class="en">Returns Policy</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="ar">النشرة البريدية</span><span class="en">Newsletter</span></h4>
+        <p style="margin-bottom:16px;"><span class="ar">اشتركي للحصول على أحدث العروض</span><span class="en">Subscribe for the latest offers</span></p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="">
+          <button class="newsletter-btn"><span class="ar">اشتراك</span><span class="en">Subscribe</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hams Style. <span class="ar">جميع الحقوق محفوظة.</span><span class="en">All rights reserved.</span></p>
+      <div class="footer-bottom-links">
+        <a href="#"><span class="ar">سياسة الخصوصية</span><span class="en">Privacy Policy</span></a>
+        <a href="#"><span class="ar">الشروط والأحكام</span><span class="en">Terms & Conditions</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/201027087044" target="_blank" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function switchLang(lang) {
+  const html = document.documentElement;
+  html.setAttribute('data-lang', lang);
+  html.setAttribute('lang', lang === 'ar' ? 'ar' : 'en');
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  
+  // Update active button
+  document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Update placeholder text
+  const input = document.querySelector('.newsletter-input');
+  if (input) {
+    input.placeholder = lang === 'ar' ? 'بريدك الإلكتروني' : 'Your email address';
+  }
+}
+
+// Set default language
+document.addEventListener('DOMContentLoaded', () => {
+  switchLang('ar');
+});
+</script>
+
+</body>
+</html>
