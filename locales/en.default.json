@@ -284,7 +284,8 @@
       "secondary_button": "View Collections"
     },
     "featured_categories": {
-      "title": "Shop by Category"
+      "title": "Shop by Category",
+      "shop_now": "Shop Now"
     },
     "new_arrivals": {
       "title": "New Arrivals",
