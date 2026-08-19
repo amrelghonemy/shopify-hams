@@ -1,9 +1,9 @@
 <section class="arrivals-section">
   <div class="container">
     <div class="arrivals-header">
-      <h2 class="section-title">{{ section.settings.title }}</h2>
+      <h2 class="section-title">{{ section.settings.title | default: 'sections.new_arrivals.title' | t }}</h2>
       <a href="{{ section.settings.view_all_link }}" class="view-all">
-        {{ section.settings.view_all_label }}
+        {{ section.settings.view_all_label | default: 'sections.new_arrivals.view_all' | t }}
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -25,7 +25,7 @@
             {% endif %}
             
             <div class="product-hover-actions">
-              <button type="submit" name="add" class="quick-add">أضيفي للسلة</button>
+              <button type="submit" name="add" class="quick-add">{{ 'sections.new_arrivals.quick_add' | t }}</button>
               <button type="button" class="wishlist-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 14S1 10 1 5.5C1 3 3 1 5.5 1C7 1 8 2 8 2S9 1 10.5 1C13 1 15 3 15 5.5C15 10 8 14 8 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>

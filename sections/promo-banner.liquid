@@ -5,10 +5,10 @@
         <div class="promo-bg-img" style="background-image: url({{ section.settings.background_image | image_url: width: 1200 }});"></div>
       {% endif %}
       <div class="promo-content">
-        <p class="promo-tagline">{{ section.settings.tagline }}</p>
-        <h2>{{ section.settings.heading }}</h2>
-        <p>{{ section.settings.description }}</p>
-        <a href="{{ section.settings.button_link }}" class="btn-hero-primary">{{ section.settings.button_label }}</a>
+        <p class="promo-tagline">{{ section.settings.tagline | default: 'sections.promo_banner.tagline' | t }}</p>
+        <h2>{{ section.settings.heading | default: 'sections.promo_banner.heading' | t }}</h2>
+        <p>{{ section.settings.description | default: 'sections.promo_banner.description' | t }}</p>
+        <a href="{{ section.settings.button_link }}" class="btn-hero-primary">{{ section.settings.button_label | default: 'sections.promo_banner.button_label' | t }}</a>
       </div>
     </div>
   </div>

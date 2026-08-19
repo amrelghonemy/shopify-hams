@@ -61,11 +61,80 @@
     }
   },
   "sections": {
+    "hero_banner": {
+      "eyebrow": "أزياء فاخرة",
+      "heading": "هَمّـس ستايل",
+      "description": "اكتشفي أناقتك مع تشكيلتنا الفريدة من الملابس العصرية المصنوعة بعناية من أجود الخامات",
+      "primary_button": "تسوقي الآن",
+      "secondary_button": "شاهدي المجموعات"
+    },
+    "featured_categories": {
+      "title": "تسوقي حسب الفئة"
+    },
+    "new_arrivals": {
+      "title": "وصل حديثاً",
+      "view_all": "عرض الكل",
+      "quick_add": "أضيفي للسلة",
+      "wishlist": "إضافة للمفضلة"
+    },
+    "promo_banner": {
+      "tagline": "مجموعة حصرية",
+      "heading": "ارتقِ بإطلالتك اليومية",
+      "description": "قطع مختارة بعناية لتناسب كل لحظة.",
+      "button_label": "تسوقي الآن"
+    },
+    "why_us": {
+      "title": "لماذا تختاريننا",
+      "feature_1_title": "ضمان الجودة",
+      "feature_1_description": "منتجات مصنوعة من أجود الخامات بمعايير عالمية",
+      "feature_2_title": "الشحن المجاني",
+      "feature_2_description": "شحن مجاني لجميع الطلبات فوق 500 جنيه",
+      "feature_3_title": "الدفع الآمن",
+      "feature_3_description": "مدفوعات آمنة ومشفرة بأساليب متعددة",
+      "feature_4_title": "خدمة العملاء",
+      "feature_4_description": "فريق دعم متاح على مدار الساعة لمساعدتك"
+    },
+    "instagram_feed": {
+      "heading": "تابعينا على انستقرام",
+      "description": "للحديث عن أحدث صيحات الموضة",
+      "follow_cta": "تابعينا"
+    },
     "header": {
-      "name": "الرأس"
+      "name": "الرأس",
+      "menu": "القائمة"
     },
     "footer": {
       "name": "التذييل"
+    },
+    "announcements": {
+      "previous_announcement": "الإعلان السابق",
+      "next_announcement": "الإعلان التالي",
+      "carousel": "عرض شرائح",
+      "announcement": "إعلان",
+      "announcement_bar": "شريط الإعلانات"
+    },
+    "cart": {
+      "cart_error": "حدث خطأ أثناء تحديث الكمية",
+      "cart_quantity_error_html": "لا يمكنك إضافة المزيد من {{ quantity }} إلى السلة"
+    },
+    "quick_order_list": {
+      "items_added": {
+        "other": "تمت إضافة {{ quantity }} منتجات",
+        "one": "تمت إضافة {{ quantity }} منتج"
+      },
+      "items_removed": {
+        "other": "تمت إزالة {{ quantity }} منتجات",
+        "one": "تمت إزالة {{ quantity }} منتج"
+      },
+      "view_cart": "عرض السلة",
+      "each": "{{ money }} للقطعة",
+      "min_error": "الحد الأدنى هو {{ min }}",
+      "max_error": "الحد الأقصى هو {{ max }}",
+      "step_error": "الخطوة هي {{ step }}"
+    },
+    "slideshow": {
+      "pause_slideshow": "إيقاف العرض",
+      "play_slideshow": "تشغيل العرض"
     }
   },
   "products": {
@@ -94,31 +163,6 @@
           "one": "{{ count }} منتج"
         }
       }
-    }
-  },
-  "sections": {
-    "cart": {
-      "cart_error": "حدث خطأ أثناء تحديث الكمية",
-      "cart_quantity_error_html": "لا يمكنك إضافة المزيد من {{ quantity }} إلى السلة"
-    },
-    "quick_order_list": {
-      "items_added": {
-        "other": "تمت إضافة {{ quantity }} منتجات",
-        "one": "تمت إضافة {{ quantity }} منتج"
-      },
-      "items_removed": {
-        "other": "تمت إزالة {{ quantity }} منتجات",
-        "one": "تمت إزالة {{ quantity }} منتج"
-      },
-      "view_cart": "عرض السلة",
-      "each": "{{ money }} للقطعة",
-      "min_error": "الحد الأدنى هو {{ min }}",
-      "max_error": "الحد الأقصى هو {{ max }}",
-      "step_error": "الخطوة هي {{ step }}"
-    },
-    "slideshow": {
-      "pause_slideshow": "إيقاف العرض",
-      "play_slideshow": "تشغيل العرض"
     }
   },
   "localization": {

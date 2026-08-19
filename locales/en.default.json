@@ -267,6 +267,44 @@
     }
   },
   "sections": {
+    "hero_banner": {
+      "eyebrow": "Luxury Fashion",
+      "heading": "Hams Style",
+      "description": "Discover your elegance with our unique collection of modern clothing crafted from the finest materials",
+      "primary_button": "Shop Now",
+      "secondary_button": "View Collections"
+    },
+    "featured_categories": {
+      "title": "Shop by Category"
+    },
+    "new_arrivals": {
+      "title": "New Arrivals",
+      "view_all": "View All",
+      "quick_add": "Quick Add",
+      "wishlist": "Add to Wishlist"
+    },
+    "promo_banner": {
+      "tagline": "Exclusive Collection",
+      "heading": "Elevate Your Everyday Style",
+      "description": "Carefully curated pieces to suit every moment.",
+      "button_label": "Shop Now"
+    },
+    "why_us": {
+      "title": "Why Choose Us",
+      "feature_1_title": "Quality Guarantee",
+      "feature_1_description": "Products made from the finest materials with international standards",
+      "feature_2_title": "Free Shipping",
+      "feature_2_description": "Free shipping on all orders over 500 EGP",
+      "feature_3_title": "Secure Payment",
+      "feature_3_description": "Safe and encrypted payments through multiple methods",
+      "feature_4_title": "Customer Service",
+      "feature_4_description": "Support team available around the clock to help you"
+    },
+    "instagram_feed": {
+      "heading": "Follow Us on Instagram",
+      "description": "Stay updated with the latest fashion trends",
+      "follow_cta": "Follow Us"
+    },
     "announcements": {
       "previous_announcement": "Previous announcement",
       "next_announcement": "Next announcement",
