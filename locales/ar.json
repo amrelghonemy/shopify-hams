@@ -153,11 +153,69 @@
       "unavailable": "غير متاح",
       "value_unavailable": "{{ option_value }} - غير متاح",
       "price": {
-        "from_price_html": "من {{ price }}"
+        "from_price_html": "من {{ price }}",
+        "regular_price": "السعر الاعتيادي",
+        "sale_price": "سعر البيع",
+        "unit_price": "سعر الوحدة"
       },
       "media": {
-        "image_available": "الصورة {{ index }}"
-      }
+        "image_available": "الصورة {{ index }}",
+        "gallery_viewer": "عارض الصور",
+        "load_image": "تحميل الصورة {{ index }} في عرض المعرض",
+        "load_model": "عرض نموذج ثلاثي الأبعاد {{ index }} في عرض المعرض",
+        "load_video": "تشغيل الفيديو {{ index }} في عرض المعرض",
+        "open_media": "افتح الوسائط {{ index }} في نافذة مشروطة",
+        "play_model": "تشغيل عارض ثلاثي الأبعاد",
+        "play_video": "تشغيل الفيديو"
+      },
+      "inventory_in_stock_show_count": "{{ quantity }} متوفر في المخزون",
+      "inventory_low_stock": "مخزون قليل",
+      "inventory_low_stock_show_count": "المخزون منخفض: تبقى {{ quantity }}",
+      "inventory_out_of_stock": "نفد المخزون",
+      "inventory_out_of_stock_continue_selling": "متوفر بالمخزون",
+      "sku": "رمز التخزين التعريفي",
+      "on_sale": "مبيع",
+      "product_variants": "متغيرات المنتج",
+      "quantity": {
+        "label": "الكمية",
+        "input_label": "الكمية لـ {{ product }}",
+        "increase": "زيادة الكمية لـ {{ product }}",
+        "decrease": "تقليل الكمية لـ {{ product }}",
+        "minimum_of": "الحد الأدنى {{ quantity }}",
+        "maximum_of": "الحد الأقصى {{ quantity }}",
+        "multiples_of": "زيادات قدرها {{ quantity }}",
+        "min_of": "الحد الأدنى {{ quantity }}",
+        "max_of": "الحد الأقصى {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> في السلة",
+        "in_cart_aria_label": "الكمية ({{ quantity }} في السلة)",
+        "note": "عرض قواعد الكمية"
+      },
+      "volume_pricing": {
+        "title": "تسعير الحجم",
+        "note": "تتوفر أسعار الجملة",
+        "minimum": "{{ quantity }}+",
+        "price_at_each_html": "بواقع {{ price }} للقطعة"
+      },
+      "pickup_availability": {
+        "view_store_info": "عرض معلومات المتجر",
+        "check_other_stores": "التحقق من التوفر في المتاجر الأخرى",
+        "pick_up_available": "الاستلام متاح",
+        "pick_up_available_at_html": "الاستلام متاح في <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "تعذّر تحميل توفر الاستلام",
+        "refresh": "تحديث"
+      },
+      "share": "شارك هذا المنتج",
+      "vendor": "البائع",
+      "variant_sold_out_or_unavailable": "نفدت الكمية أو هذا المتغير غير متاح",
+      "video_exit_message": "{{ title }} يفتح الفيديو بملء الشاشة في نفس النافذة.",
+      "view_full_details": "عرض التفاصيل كاملة",
+      "xr_button": "عرض في مساحتك",
+      "xr_button_label": "اعرضها في مساحتك، حمّل العنصر في نافذة الواقع المعزز",
+      "taxes_included": "الضرائب مشمولة.",
+      "duties_included": "الواجبات المتضمنة.",
+      "duties_and_taxes_included": "الرسوم والضرائب مشمولة.",
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">الشحن</a> يُحسب عند إتمام الشراء."
     },
     "collection": {
       "filter": "تصفية",
@@ -172,6 +230,40 @@
           "one": "{{ count }} منتج"
         }
       }
+    },
+    "modal": {
+      "label": "معرض الوسائط"
+    },
+    "facets": {
+      "filter_and_operator_subtitle": "مطابقة الكل",
+      "apply": "تقديم",
+      "clear": "واضح",
+      "clear_all": "إزالة الكل",
+      "from": "من",
+      "filter_and_sort": "تصفية وفرز",
+      "filter_by_label": "تصفية:",
+      "filter_button": "عامل تصفية",
+      "filters_selected": {
+        "one": "{{ count }} محدد",
+        "other": "{{ count }} محدد"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} فلاتر مختارة)",
+      "show_more": "أظهر المزيد",
+      "show_less": "عرض أقل",
+      "max_price": "أعلى سعر هو {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} من أصل {{ count }} منتج",
+        "other": "{{ product_count }} من أصل {{ count }} منتج"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجات"
+      },
+      "reset": "إعادة ضبط",
+      "sort_button": "فرز",
+      "sort_by_label": "الترتيب حسب:",
+      "to": "إلى",
+      "clear_filter": "إزالة الفلتر"
     }
   },
   "localization": {
@@ -520,6 +612,50 @@
         "order_name_label": "اطلب %{name}",
         "shopping_cart_label": "عربة التسوق",
         "discount_title": "خصم"
+      }
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "لم يتم العثور على نتائج لـ \"{{ terms }}\". تحقق من الإملاء أو استخدم كلمة أو عبارة مختلفة.",
+      "page": "صفحة",
+      "products": "المنتجات",
+      "results_pages_with_count": {
+        "one": "{{ count }} صفحة",
+        "other": "{{ count }} صفحة"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} اقتراح",
+        "other": "{{ count }} اقتراحات"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجات"
+      },
+      "results_with_count": {
+        "one": "{{ count }} نتيجة",
+        "other": "{{ count }} نتائج"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} نتيجة مطابقة لـ \" {{ terms }}\"",
+        "other": "{{ count }} نتائج مطابقة لـ \" {{ terms }}\""
+      },
+      "title": "نتائج البحث",
+      "search_for": "البحث عن \"{{ terms }}\"",
+      "suggestions": "اقتراحات",
+      "pages": "صفحات"
+    },
+    "cart": {
+      "cart": "عربة التسوق"
+    },
+    "contact": {
+      "form": {
+        "title": "نموذج الاتصال",
+        "name": "الاسم",
+        "email": "بريد إلكتروني",
+        "phone": "رقم الهاتف",
+        "comment": "تعليق",
+        "send": "إرسال"
       }
     }
   }
