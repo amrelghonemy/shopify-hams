@@ -97,7 +97,69 @@
           "secondary_button": "background",
           "on_secondary_button": "secondary_button_label",
           "secondary_button_border": "secondary_button_label"
-        }
+        },
+        "presets": [
+          {
+            "value": {
+              "background": "#FEFCF9",
+              "background_gradient": "",
+              "text": "#3D3D3D",
+              "button": "#B85450",
+              "button_label": "#ffffff",
+              "secondary_button_label": "#B85450",
+              "shadow": "#3D3D3D"
+            },
+            "label": "Primary"
+          },
+          {
+            "value": {
+              "background": "#FDF8F3",
+              "background_gradient": "",
+              "text": "#3D3D3D",
+              "button": "#B85450",
+              "button_label": "#ffffff",
+              "secondary_button_label": "#B85450",
+              "shadow": "#3D3D3D"
+            },
+            "label": "Light"
+          },
+          {
+            "value": {
+              "background": "#B85450",
+              "background_gradient": "",
+              "text": "#ffffff",
+              "button": "#ffffff",
+              "button_label": "#B85450",
+              "secondary_button_label": "#ffffff",
+              "shadow": "#3D3D3D"
+            },
+            "label": "Accent"
+          },
+          {
+            "value": {
+              "background": "#DB7093",
+              "background_gradient": "",
+              "text": "#ffffff",
+              "button": "#ffffff",
+              "button_label": "#DB7093",
+              "secondary_button_label": "#ffffff",
+              "shadow": "#3D3D3D"
+            },
+            "label": "Rose"
+          },
+          {
+            "value": {
+              "background": "#9B72CF",
+              "background_gradient": "",
+              "text": "#ffffff",
+              "button": "#ffffff",
+              "button_label": "#9B72CF",
+              "secondary_button_label": "#ffffff",
+              "shadow": "#3D3D3D"
+            },
+            "label": "Purple"
+          }
+        ]
       }
     ]
   },
