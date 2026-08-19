@@ -1759,7 +1759,10 @@
           "tax_credential_pt": "الرقم الضريبي/رقم تعريف دافع الضريبة (NIF/IVA)",
           "shipping_credential_pt": "الرقم الضريبي/رقم تعريف دافع الضريبة (NIF/IVA)",
           "tax_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب",
-          "shipping_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب"
+          "shipping_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب",
+          "shipping_credential_tw": "رقم الهوية الوطنية/ضريبة القيمة المضافة",
+          "tax_credential_tr": "رقم هوية الجمهورية التركية/ضريبة القيمة المضافة",
+          "shipping_credential_tr": "رقم هوية الجمهورية التركية/ضريبة القيمة المضافة"
         }
       },
       "payment_gateway": {
@@ -1774,7 +1777,27 @@
         "draft_order_payment_due_later_terms": "سوف تكون على شروط {{translatedName}} بمجرد تأكيد طلبك.",
         "draft_order_payment_due_on_fulfillment": "سيتم الدفع عند تأكيد طلبك وتنفيذه.",
         "draft_order_deposit_due_later": "{{depositAmount}} سيتم استحقاقها عند تأكيد طلبك. سيكون الرصيد على شروط {{translatedName}}.",
-        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. أما الرصيد المتبقي فسيكون مستحقًا عند إنجاز طلبك."
+        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. أما الرصيد المتبقي فسيكون مستحقًا عند إنجاز طلبك.",
+        "credit_card_label": "بطاقة ائتمان",
+        "bogus_label": "بوابة دفع تجريبية",
+        "bank_deposit_label": "إيداع بنكي",
+        "bank_account_label": "الحساب المصرفي",
+        "cash_on_delivery_label": "الدفع عند الاستلام",
+        "money_order_label": "حوالة بريدية",
+        "debit_card_label": "بطاقة المدين",
+        "credit_or_debit_card_label": "بطاقة ائتمان/خصم",
+        "deferred_payment_label": "اختر طريقة الدفع لاحقًا",
+        "fixed_payment_label": "سيصبح دفعك مستحقاً في {{dueDate}}.",
+        "generic_payment_terms": "أنت على شروط {{translatedName}}. سيكون موعد استحقاق الدفع في {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} إلى حساب لديه صلاحية الوصول إلى هذا الموقع لإضافة طرق دفع محفوظة أو استخدامها.",
+            "link": "تسجيل الدخول"
+          }
+        },
+        "direct_payment_terms": "أنت تستخدم شروط {{translatedName}}. سيتم تحصيل المبلغ من بطاقتك في {{dueDate}}.",
+        "fixed_direct_payment_terms": "سيتم خصم المبلغ من بطاقتك في {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "ستكون دفعتك مستحقة بمجرد تنفيذ طلبك."
       },
       "vaulted": {
         "change_button": "تغيير",
@@ -1826,6 +1849,237 @@
         },
         "saved_address_option_link": "استخدام عنوان محفوظ",
         "saved_address_modal_title": "استخدم عنواني المحفوظ"
+      },
+      "payment_errors": {
+        "development_store_order_limit_reached": "لقد وصلت إلى الحد المسموح به لطلبات متاجر التطوير باستخدام معالج الدفع هذا. لتقديم طلب آخر، ستحتاج إلى استخدام بوابة دفع اختبارية. تعرّف على المزيد حول %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "لتقديم طلب اختبار، ستحتاج إلى استخدام بوابة دفع تجريبية. تعرَّف على المزيد حول %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "اختبار الطلبات في المتاجر التجريبية",
+        "payment_above_threshold": "مبلغ الدفع يتجاوز الحد المالي لهذه المنطقة. يُرجى تقليل الإجمالي والمحاولة مرة أخرى",
+        "risky": "حدثت مشكلة أثناء معالجة دفعتك. يرجى إعادة المحاولة أو استخدام طريقة دفع مختلفة.",
+        "expired_buyer_action": "انتهت مهلة طريقة الدفع. حاول مرة أخرى.",
+        "name_mismatch": "تحقق من تفاصيل بطاقتك. لا يتطابق الاسم الموجود على بطاقتك وعنوان الفواتير.",
+        "shop_pay_wallet_not_available": "Shop Pay غير متاح لعملية الدفع هذه.",
+        "market_manager_blocks_wallet_payments": "طريقة الدفع غير مدعومة في بلدك.",
+        "paypal_over_capture": "تم تحديث إجمالي طلبك. ادفع باستخدام {{walletName}} لإكمال طلبك.",
+        "captcha_required": "أدخل معلومات الدفع وحل اختبار الكابتشا لإتمام عملية الشراء.",
+        "captcha_required_without_payment_information": "حل اختبار الكابتشا لإتمام عملية الشراء.",
+        "payment_credential_delegation_error": "حدثت مشكلة أثناء معالجة دفعتك. يُرجى اختيار طريقة دفع جديدة."
+      },
+      "shipping_errors": {
+        "shipping_method": "لقد تغيرت خيارات الشحن لطلبك. يرجى مراجعة اختيارك.",
+        "shipping_method_not_available": "لقد تم تحديث عربة التسوق الخاصة بك ولا يمكن شحن المنتجات التي أضفتها إلى عنوانك. يُرجى إزالة المنتجات لإتمام طلبك.",
+        "shipping_method_not_available_generic": {
+          "one": "لا يمكن شحن طلبك إلى العنوان المحدد. يُرجى مراجعة عنوانك للتأكد من صحته ثم المحاولة مرة أخرى، أو تحديد عنوان مختلف.",
+          "other": "لا يمكن شحن بعض المنتجات في سلة التسوق إلى العنوان الذي أدخلته. يُرجى مراجعة عنوانك للتأكد من صحته والمحاولة مرة أخرى، أو تحديد عنوان مختلف."
+        },
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "العناصر الموجودة في سلة التسوق لا تستوفي متطلبات السعر أو الوزن للتأهل للشحن. يُرجى تحديث سلة التسوق والمحاولة مرة أخرى.",
+        "shipping_method_not_available_updated": {
+          "one": "المنتج الذي أضفته لا يتم شحنه إلى موقعك. قم بإزالته لإتمام الشراء، أو اتصل بالمتجر.",
+          "other": "لا تشحن سلعة واحدة أو أكثر من السلع التي أضفتها إلى موقعك. قم بإزالتها لإتمام عملية الدفع، أو اتصل بالمتجر."
+        },
+        "payment_method_not_supported": "لا يمكنك استخدام طريقة الدفع هذه لـ %{country}. استخدم طريقة دفع مختلفة للشحن إلى هذا البلد.",
+        "empty_state": "أدخل عنوان الشحن الخاص بك لعرض طرق الشحن المتاحة.",
+        "title": "الشحن غير متاح",
+        "invalid_selected_address": "عنوان الشحن المحدد غير صالح",
+        "invalid_selected_address_with_update_link": "عنوان الشحن المحدد غير صالح. %{update_address_link} أو اختر عنوانًا مختلفًا",
+        "unavailable_addresses_only_countries": "لا يمكن شحن طلبك إلا إلى {{countriesList}}. أضف عنوانًا جديدًا للمتابعة.",
+        "unavailable_address_country": "الشحن غير متوفر في البلد الذي اخترته. استخدم عنوانًا مختلفًا للمتابعة",
+        "unavailable_selected_address": "الشحن غير متاح للعنوان المحدد",
+        "unavailable_selected_address_for_region": "الشحن غير متاح لـ {{region}}. يرجى اختيار عنوان مختلف للمتابعة"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "الدفع السريع",
+        "or": "أو",
+        "or_pay_another_way": "أو ادفع بطريقة أخرى",
+        "or_check_out_another_way": "أو يمكنك تجربة طريقة أخرى",
+        "or_pay_with_credit_card": "أو الدفع ببطاقة الائتمان",
+        "show_more_options": "أظهِر المزيد من الخيارات",
+        "hide_more_options": "إخفاء المزيد من الخيارات"
+      },
+      "post_purchase": {
+        "page_title": "ما بعد الشراء",
+        "title": "ما بعد الشراء",
+        "escape_confirmation": "لقد دفعتَ ثمن طلبك.",
+        "escape_action": "عرض تفاصيل الطلب ›",
+        "components": {
+          "close": "إغلاق",
+          "expand": "عرض المزيد",
+          "processing": "جارٍ المعالجة…",
+          "submit": "إرسال"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "جارٍ إعادة التوجيه...",
+        "redirecting_title": "جارٍ إعادة التوجيه...",
+        "redirecting_notice": "الرجاء الانتظار ريثما تتم إعادة توجيهك.",
+        "redirecting_to_bank": "جارٍ إعادة التوجيه إلى {{bank}}",
+        "complete_your_purchase_title": "أكمل عملية الشراء",
+        "continue_to_payment_gateway_notice": "للمتابعة إلى الدفع، يرجى إضافة معلومات الدفع الخاصة بك.",
+        "continue_to_payment_gateway_button_label": "متابعة الدفع",
+        "complete_your_purchase_title_error": "صحّح معلومات الدفع الخاصة بك",
+        "continue_to_payment_gateway_notice_error": "تعذر التحقق من معلومات الدفع الخاصة بك.",
+        "continue_to_payment_gateway_button_label_error": "تحديث معلومات الدفع",
+        "page_title": "جاري معالجة الطلب",
+        "title": "جاري معالجة الطلب",
+        "your_order_has_been_received_title": "شكراً لطلبك",
+        "you_will_receive_confirmation": "نتلقى الكثير من الطلبات في الوقت الحالي. من المفترض أن تتلقى تأكيدًا عبر البريد الإلكتروني أو الرسائل النصية قريبًا. إذا لم تستلمه خلال الساعة القادمة، يرجى إبلاغنا.",
+        "you_will_not_be_charged": "لن يتم محاسبتك بعد.",
+        "wait": {
+          "short": "جارٍ معالجة طلبك.",
+          "medium": {
+            "one": "جارٍ معالجة طلبك. وقت الانتظار المتوقع هو %{count} دقيقة.",
+            "other": "يجري العمل على طلبك. مدة الانتظار المتوقعة هي %{count} دقيقة."
+          },
+          "long": "ستتلقى رسالة بريد إلكتروني بمجرد معالجة طلبك. يوجد حاليًا عدد كبير من الطلبات.",
+          "no_auto_refresh_html": "إذا لم تتم إعادة توجيهك تلقائيًا، %{link}.",
+          "refresh_this_page": "حدِّث هذه الصفحة"
+        },
+        "remote_shops_payments_processing": "معالجة المدفوعات",
+        "action_required": "الإجراء المطلوب",
+        "modal_notice": "نحن نتواصل مع {{paymentMethod}}",
+        "remote_checkout_count": "%{current} من %{total}"
+      },
+      "payment_challenge_modal": {
+        "instructions": "أكمل عملية الشراء باستخدام الرمز الخاص بك {{paymentMethod}}",
+        "timer_message": "لديك {{timeLeft}} للدفع",
+        "copy_text": "انسخ رمز {{paymentMethod}}",
+        "open_app_text": "افتح تطبيق {{paymentMethod}}",
+        "header": "ادفع باستخدام {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "أكمل عملية الشراء باستخدام الرمز الخاص بك {{paymentMethod}}",
+          "wechat_instructions": "امسح رمز الاستجابة السريعة هذا باستخدام تطبيق WeChat على هاتفك لإتمام عملية الشراء",
+          "wechat_instructions_mobile": "امسح رمز الاستجابة السريعة (QR) هذا باستخدام تطبيق WeChat على جهاز آخر لإتمام عملية الشراء"
+        },
+        "external": {
+          "instructions": "أكد الدفع على تطبيقك لإتمام عملية الشراء هذه"
+        },
+        "close": "أغلِق التحدي"
+      },
+      "failed_payment": {
+        "page_title": "تعذر إتمام عملية الدفع",
+        "title": "تعذر إتمام عملية الدفع",
+        "payment_not_processed_title": "تعذر إتمام عملية الدفع الخاصة بك",
+        "payment_not_processed_text": "لم يتم تحصيل المبلغ منك. عُد إلى سلة التسوق لإتمام عملية الشراء.",
+        "return_to_cart_button_label": "العودة إلى عربة التسوق"
+      },
+      "payment": {
+        "network_card_payment_options": "اختر شبكة بطاقة",
+        "network_card_persistence_description": "سيتم حفظ الشبكة المحددة مع طريقة الدفع الخاصة بك للمعاملات المستقبلية.",
+        "amazon_payments_label": "أمازون باي",
+        "amazon_payments_login_hint": "سيُطلب منك تسجيل الدخول باستخدام أمازون.",
+        "amazon_payments_logout": "تسجيل الخروج من Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "تعذر استخدام طريقة الدفع المختارة. يُرجى تحديد طريقة مختلفة، أو التواصل مع المصرف الذي تتعامل معه، أو الجهة المصدرة لبطاقتك.",
+        "amazon_payments_abandoned_mfa_challenge": "تعذر إتمام عملية الدفع. يرجى تجربة طريقة دفع مختلفة أو الاتصال بالمصرف الذي تتعامل معه أو جهة إصدار البطاقة.",
+        "amazon_payments_could_not_enqueue_authorize": "حدثت مشكلة أثناء معالجة دفعتك. يرجى إعادة المحاولة أو استخدام طريقة دفع مختلفة.",
+        "title": "الدفع",
+        "amount_left_to_pay_label": "تاريخ استحقاق الدفع:",
+        "discount_button_action_label": "تطبيق رمز الخصم",
+        "discount_codes_removed_summary": {
+          "one": "تمت إزالة رمز الخصم %{count}",
+          "other": "تم حذف %{count} رمز خصم"
+        },
+        "discount_codes_modified_summary": {
+          "one": "تم تعديل رمز الخصم %{count}.",
+          "other": "تم تعديل %{count} من رموز الخصم"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "تمت إزالة أو تعديل رمز خصم واحد",
+          "other": "تمت إزالة أو تعديل %{count} من أكواد الخصم"
+        },
+        "discount_show_more_warnings": {
+          "one": "عرض %{count} أخرى",
+          "other": "عرض %{count} أخرى"
+        },
+        "gift_card_code_label": "رمز بطاقة الهدايا",
+        "apply_gift_card_button_label": "تقديم",
+        "gift_card_balance_label": "الرصيد:",
+        "supported_card_brands_more_label": "والمزيد…",
+        "detected_card_brand": "اكتشفت ماركة البطاقة: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "احفظ بطاقتك الائتمانية",
+        "credit_card_vaulting_sign_in_banner_info": "قم بتسجيل الدخول أو إنشاء حساب لحفظ بطاقتك الائتمانية للمشتريات المستقبلية.",
+        "credit_card_vaulting_sign_in_banner_button_label": "تسجيل الدخول",
+        "ftd_vault_credit_card_label": "احفظ بطاقة الائتمان هذه في حسابي لعملية دفع أسرع",
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "bogus_test_checkout": {
+          "title": "تعليمات الاختبار",
+          "intro": "استخدم هذه القيم لاختبار عملية الدفع:",
+          "approved_transaction": "{{card_number}} لمحاكاة معاملة معتمدة",
+          "declined_transaction": "{{card_number}} لمحاكاة معاملة مرفوضة",
+          "gateway_failure": "{{card_number}} لمحاكاة فشل في البوابة",
+          "additional_instructions": "استخدم أي تاريخ انتهاء صلاحية مستقبلي وأي رمز أمان مكون من 3 أرقام.",
+          "support_link": "احصل على الدعم"
+        },
+        "card_pay_with": "الدفع بواسطة:",
+        "card_security_notice": "جميع المعاملات آمنة ومشفرة.",
+        "card_security_vault_notice": "نحتاج تفاصيلك للدفعات المستقبلية. جميع المعاملات آمنة ومشفرة.",
+        "card_information_notice": "جميع المعاملات آمنة ومشفرة. لا يتم تخزين معلومات بطاقة الائتمان أبدًا.",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "card_nickname_label": "الاسم المستعار (اختياري)",
+        "card_expired": "انتهت صلاحيته",
+        "card_expiry_label": "تاريخ الانتهاء (شهر / سنة)",
+        "card_expiry_placeholder": "تاريخ الانتهاء (شهر / سنة)",
+        "credit_card_start_month": "شهر البدء",
+        "credit_card_start_year": "سنة البدء",
+        "delete_customer_mandate_modal_title": "هل تريد إزالة بطاقة الدفع هذه؟",
+        "delete_customer_mandate_modal_body": "إذا قمت بإزالة هذه البطاقة، ستحتاج إلى إضافتها مرة أخرى قبل استخدامها للدفع.",
+        "delete_customer_mandate_modal_confirm": "إزالة البطاقة",
+        "delete_customer_mandate_modal_cancel": "إلغاء",
+        "card_verification_value_label": "الرمز الأمني",
+        "card_verification_value_placeholder": "الرمز الأمني",
+        "card_verification_confirm": "لأغراض التحقق، أدخل رمز الأمان لبطاقتك.",
+        "card_expiry_date_explanation": "تاريخ انتهاء صلاحية البطاقة بالتنسيق: شهر، شهر، سنة، سنة",
+        "card_expiration_month_label": "شهر الانتهاء",
+        "card_expiration_year_label": "سنة الانتهاء",
+        "card_verification_value_explanation": "رمز الأمان المكون من 3 أرقام يوجد عادةً على ظهر بطاقتك. تحتوي بطاقات أمريكان إكسبريس على رمز مكون من 4 أرقام يقع في الجهة الأمامية.",
+        "card_verification_value_explanation_amex": "رمز الأمان المكون من 4 أرقام على واجهة بطاقتك",
+        "card_verification_value_explanation_other": "الرمز الأمني المكون من 3 أرقام على ظهر بطاقتك",
+        "card_start_label": "تاريخ الإصدار (شهر / سنة)",
+        "card_start_placeholder": "تاريخ الإصدار (شهر / سنة)",
+        "card_issue_number_label": "رقم الإصدار",
+        "card_issue_number_placeholder": "رقم الإصدار",
+        "card_change_label": "تغيير",
+        "card_update_label": "تحديث البطاقة",
+        "paypal_disconnect": "قطع الاتصال",
+        "ends_with_label": "تنتهي بـ %{last_digits}",
+        "masked_digits_label": "•••• %{last_digits}",
+        "payment_method_saved": "طريقة الدفع محفوظة",
+        "card_vaulted_company_location": "تم حفظ البطاقة لهذا الموقع",
+        "bank_account_vaulted_company_location": "تم حفظ الحساب المصرفي لهذا الموقع",
+        "expiry_long": "(ينتهي في %{month}/%{year})",
+        "expiry_short": "(تاريخ انتهاء الصلاحية %{month}/%{year})",
+        "crypto_payment_method": {
+          "description": "وصِّل محفظتك بأمان. لن تتم مشاركة رصيدك وعنوانك.",
+          "tooltip": "لن يتم مشاركة رصيد محفظتك وعنوانها، ولا يمكن خصم سوى المبلغ المطلوب.",
+          "cashback_descriptor": {
+            "one": "سوف تتلقى استردادك النقدي بعد %{count} يوم",
+            "other": "ستتلقى استردادك النقدي بعد %{count} يومًا"
+          }
+        },
+        "crypto_modal": {
+          "header": "ادفع %{total_price} USDC إلى %{shop_name}",
+          "error": {
+            "refresh": "تحديث",
+            "close": "إغلاق",
+            "sandbox_error": "حدث خطأ ما",
+            "web_component_error": "حدثت مشكلة في تحميل هذه الصفحة"
+          }
+        },
+        "saved_by_payment_method": "تم الحفظ بواسطة %{payment_method}",
+        "pay_with_payment_method": "ادفع باستخدام %{payment_method}",
+        "pay_with_credit_card": "الدفع ببطاقة الائتمان",
+        "pay_with_debit_card": "ادفع ببطاقة السحب الآلي",
+        "different_credit_card_label": "استخدم بطاقة ائتمان مختلفة",
+        "same_billing_address_label": "مطابق لعنوان الشحن",
+        "different_billing_address_label": "استخدم عنوان فوترة مختلفًا",
+        "billing_address_associated_with_mandate": "استخدم العنوان المرتبط بطريقة الدفع",
+        "billing_address_associated_with_mandate_info": "إذا كنت ترغب في تغيير عنوان الفوترة الخاص بك، فيرجى إزالة تفاصيل بطاقتك الائتمانية وإعادة إدخالها.",
+        "free_order_notice_html": "طلبك <strong>مجاني</strong>. لا يلزم الدفع.",
+        "express_checkout_free_order": "لن يتم محاسبتك على طلب مجاني",
+        "order_covered_by_gift_cards_notice": {
+          "one": "تمت تغطية طلبك بواسطة بطاقة الهدايا الخاصة بك."
+        }
       }
     }
   },
