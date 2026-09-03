@@ -77,14 +77,15 @@
   },
   "sections": {
     "hero_banner": {
-      "eyebrow": "أزياء فاخرة",
-      "heading": "هَمّـس ستايل",
-      "description": "اكتشفي أناقتك مع تشكيلتنا الفريدة من الملابس العصرية المصنوعة بعناية من أجود الخامات",
-      "primary_button": "تسوقي الآن",
-      "secondary_button": "شاهدي المجموعات"
+      "eyebrow": "مجموعة جديدة",
+      "heading": "أناقتك تبدأ من هنا",
+      "description": "اكتشفي أحدث اختيارات Hams Style المصممة لتكمل إطلالتك بكل أناقة.",
+      "primary_button": "تسوق الآن",
+      "secondary_button": "استكشف المجموعة"
     },
     "featured_categories": {
-      "title": "تسوقي حسب الفئة"
+      "title": "الأقسام المميزة",
+      "shop_now": "تسوق الآن"
     },
     "new_arrivals": {
       "title": "وصل حديثاً",
@@ -97,23 +98,23 @@
       "tagline": "مجموعة حصرية",
       "heading": "ارتقِ بإطلالتك اليومية",
       "description": "قطع مختارة بعناية لتناسب كل لحظة.",
-      "button_label": "تسوقي الآن"
+      "button_label": "تسوق المجموعة"
     },
     "why_us": {
-      "title": "لماذا تختاريننا",
-      "feature_1_title": "ضمان الجودة",
-      "feature_1_description": "منتجات مصنوعة من أجود الخامات بمعايير عالمية",
-      "feature_2_title": "الشحن المجاني",
-      "feature_2_description": "شحن مجاني لجميع الطلبات فوق 500 جنيه",
-      "feature_3_title": "الدفع الآمن",
-      "feature_3_description": "مدفوعات آمنة ومشفرة بأساليب متعددة",
-      "feature_4_title": "خدمة العملاء",
-      "feature_4_description": "فريق دعم متاح على مدار الساعة لمساعدتك"
+      "title": "لماذا Hams Style",
+      "feature_1_title": "جودة تستحق الثقة",
+      "feature_1_description": "منتجات مختارة بعناية وبجودة عالية",
+      "feature_2_title": "شحن مجاني",
+      "feature_2_description": "للطلبات فوق 500 جنيه",
+      "feature_3_title": "دفع آمن",
+      "feature_3_description": "طرق دفع آمنة وسهلة",
+      "feature_4_title": "خدمة عملاء",
+      "feature_4_description": "نحن هنا لمساعدتك قبل وبعد الطلب"
     },
     "instagram_feed": {
-      "heading": "تابعينا على انستقرام",
-      "description": "للحديث عن أحدث صيحات الموضة",
-      "follow_cta": "تابعينا"
+      "heading": "تابعي Hams Style",
+      "description": "@hamss_tyle",
+      "follow_cta": "تابعينا على إنستغرام"
     },
     "header": {
       "name": "الرأس",

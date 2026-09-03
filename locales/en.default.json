@@ -277,14 +277,14 @@
   },
   "sections": {
     "hero_banner": {
-      "eyebrow": "Luxury Fashion",
-      "heading": "Hams Style",
-      "description": "Discover your elegance with our unique collection of modern clothing crafted from the finest materials",
+      "eyebrow": "New Collection",
+      "heading": "Style Made for You",
+      "description": "Discover the latest pieces curated to elevate your everyday style.",
       "primary_button": "Shop Now",
-      "secondary_button": "View Collections"
+      "secondary_button": "Explore Collection"
     },
     "featured_categories": {
-      "title": "Shop by Category",
+      "title": "Featured Categories",
       "shop_now": "Shop Now"
     },
     "new_arrivals": {
@@ -298,23 +298,23 @@
       "tagline": "Exclusive Collection",
       "heading": "Elevate Your Everyday Style",
       "description": "Carefully curated pieces to suit every moment.",
-      "button_label": "Shop Now"
+      "button_label": "Shop Collection"
     },
     "why_us": {
-      "title": "Why Choose Us",
+      "title": "Why Hams Style",
       "feature_1_title": "Quality Guarantee",
-      "feature_1_description": "Products made from the finest materials with international standards",
+      "feature_1_description": "Premium selected products",
       "feature_2_title": "Free Shipping",
-      "feature_2_description": "Free shipping on all orders over 500 EGP",
+      "feature_2_description": "On orders over 500 EGP",
       "feature_3_title": "Secure Payment",
-      "feature_3_description": "Safe and encrypted payments through multiple methods",
+      "feature_3_description": "Safe and easy payment methods",
       "feature_4_title": "Customer Service",
-      "feature_4_description": "Support team available around the clock to help you"
+      "feature_4_description": "We're here to help you"
     },
     "instagram_feed": {
-      "heading": "Follow Us on Instagram",
-      "description": "Stay updated with the latest fashion trends",
-      "follow_cta": "Follow Us"
+      "heading": "Follow Hams Style",
+      "description": "@hamss_tyle",
+      "follow_cta": "Follow Us on Instagram"
     },
     "announcements": {
       "previous_announcement": "Previous announcement",
@@ -323,7 +323,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
