@@ -78,3 +78,33 @@ html[dir="rtl"] .list-menu--inline {
 html[dir="rtl"] .button, html[dir="rtl"] .link {
   direction: rtl;
 }
+
+/* Newsletter RTL - اشترك للحصول على آخر التحديثات starts from right */
+html[dir="rtl"] .newsletter,
+html[dir="rtl"] .newsletter__wrapper,
+html[dir="rtl"] .email-signup-banner__box {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .newsletter-form {
+  align-items: flex-start;
+  direction: rtl;
+}
+html[dir="rtl"] .newsletter-form__field-wrapper .field__input {
+  padding-right: 1.5rem !important;
+  padding-left: 5rem !important;
+  text-align: right !important;
+}
+html[dir="rtl"] .newsletter-form__button {
+  right: auto !important;
+  left: var(--inputs-border-width) !important;
+}
+html[dir="rtl"] .field__label {
+  left: auto !important;
+  right: 2rem !important;
+  text-align: right !important;
+}
+html[dir="rtl"] .newsletter__subheading,
+html[dir="rtl"] .email-signup-banner__heading {
+  text-align: right;
+}
