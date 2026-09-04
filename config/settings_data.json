@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/Dusty_Pink_Beauty_Label_Decorated_With_Rose_Gold_1.png",
-    "logo_width": 130,
+    "logo_width": 150,
     "favicon": "shopify://shop_images/Dusty_Pink_Beauty_Label_Decorated_With_Rose_Gold_1.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -151,21 +151,21 @@
           "background": "#fdf8f3",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#E5A6A6",
+          "button": "#e5a6a6",
           "button_label": "#ffffff",
-          "secondary_button_label": "#E5A6A6",
+          "secondary_button_label": "#e5a6a6",
           "shadow": "#ffffff"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#FEFCF9",
+          "background": "#fefcf9",
           "background_gradient": "",
-          "text": "#FFFFFF",
-          "button": "#C97B7B",
-          "button_label": "#FFFFFF",
-          "secondary_button_label": "#FFFFFF",
-          "shadow": "#FFFFFF"
+          "text": "#ffffff",
+          "button": "#c97b7b",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       },
       "scheme-5": {
@@ -184,7 +184,7 @@
           "background": "#fdf8f3",
           "background_gradient": "linear-gradient(3deg, rgba(241, 226, 226, 1), rgba(229, 166, 166, 1) 100%)",
           "text": "#000000",
-          "button": "#E5A6A6",
+          "button": "#e5a6a6",
           "button_label": "#000000",
           "secondary_button_label": "#000000",
           "shadow": "#ffffff"
