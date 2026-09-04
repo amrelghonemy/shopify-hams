@@ -93,3 +93,23 @@ html[dir="rtl"] .banner--content-align-center {
   justify-content: flex-end !important;
   text-align: right !important;
 }
+
+/* Header + Rich Text stay LTR even when ar (dir=rtl) */
+html[dir="rtl"] .header,
+html[dir="rtl"] .header__icons,
+html[dir="rtl"] .header__inline-menu,
+html[dir="rtl"] .header-wrapper {
+  direction: ltr !important;
+  text-align: left !important;
+}
+html[dir="rtl"] .rich-text,
+html[dir="rtl"] .rich-text__wrapper,
+html[dir="rtl"] .rich-text__blocks {
+  direction: ltr !important;
+  text-align: center !important; /* keep Dawn center alignment, not right */
+}
+html[dir="rtl"] .rich-text__heading,
+html[dir="rtl"] .rich-text__text {
+  text-align: center !important;
+  direction: ltr !important;
+}
