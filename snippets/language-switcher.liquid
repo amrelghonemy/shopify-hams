@@ -22,16 +22,23 @@
     var form = document.querySelector('[data-language-switcher]');
     var input = document.getElementById('HamsLangInput');
 
-    if (!switcher || !form || !input) return;
+    if (!switcher) return;
 
     switcher.addEventListener('click', function(e) {
       e.preventDefault();
       var btn = e.target.closest('.hams-lang-btn');
       if (!btn || btn.classList.contains('is-active')) return;
-
       var lang = btn.getAttribute('data-lang');
-      input.value = lang;
-      form.submit();
+      // Try Shopify localization form if available (requires language published)
+      if (form && input) {
+        input.value = lang;
+        // form submit may fail silently if locale not published -> fallback to URL param
+        try { form.submit(); return; } catch(err) {}
+      }
+      // Fallback: direct locale param (works even if language not published, shows translation via ?locale=)
+      var url = new URL(window.location.href);
+      url.searchParams.set('locale', lang);
+      window.location.href = url.toString();
     });
   });
 </script>
