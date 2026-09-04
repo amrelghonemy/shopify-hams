@@ -50,6 +50,7 @@
   {%- capture input_dataset -%}
     data-product-url="{{ value.product_url }}"
     data-option-value-id="{{ value.id }}"
+    data-option-name="{{ option.name | escape }}"
   {%- endcapture -%}
 
   {%- capture label_unavailable -%}
@@ -65,6 +66,7 @@
       <span class="visually-hidden">{{ escaped_value }}</span>
       {{ label_unavailable }}
     {%- endcapture -%}
+
     {%
       render 'swatch-input',
       id: input_id,
@@ -83,7 +85,7 @@
       type="radio"
       id="{{ input_id }}"
       name="{{ input_name | escape }}"
-      value="{{ value | escape }}"
+      value="{{ escaped_value }}"
       form="{{ product_form_id }}"
       {% if value.selected %}
         checked
@@ -100,7 +102,7 @@
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"
-      value="{{ value | escape }}"
+      value="{{ escaped_value }}"
       {% if value.selected %}
         selected="selected"
       {% endif %}

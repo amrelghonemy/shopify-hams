@@ -1,0 +1,80 @@
+/* Hams palette - matches http://localhost:3001/ */
+:root {
+  --hams-warm-white: #FEFCF9;
+  --hams-cream-100: #FDF8F3;
+  --hams-cream-200: #FAF0E6;
+  --hams-cream-300: #F5E6D3;
+  --hams-cream-400: #EDD9C0;
+  --hams-blush-100: #F5C6C6;
+  --hams-blush-200: #E8A0A0;
+  --hams-blush-300: #D4767A;
+  --hams-blush-400: #B85450;
+  --hams-primary: #B85450;
+  --hams-peach-100: #FFDAB9;
+  --hams-peach-200: #FFB88C;
+  --hams-peach-300: #F4A460;
+  --hams-rose-100: #FFE4E1;
+  --hams-rose-200: #FFB6C1;
+  --hams-rose-300: #FF69B4;
+  --hams-rose-400: #DB7093;
+  --hams-mauve-100: #E0C3FC;
+  --hams-mauve-200: #C8A2E8;
+  --hams-mauve-300: #9B72CF;
+  --hams-charcoal-700: #3D3D3D;
+  --hams-charcoal-500: #7A7A7A;
+}
+/* Force Cairo for BOTH ar and en - overrides Shopify font picker */
+html, body, html * {
+  font-family: 'Cairo', sans-serif !important;
+}
+/* Force Hams colors visibly - override Dawn schemes */
+body {
+  background-color: #FEFCF9 !important;
+  color: #3D3D3D !important;
+}
+.color-scheme-1, .color-background-1, .color-scheme-2 {
+  --color-background: 254,252,249 !important;
+  --color-foreground: 61,61,61 !important;
+  --color-button: 184,84,80 !important;
+}
+.button, .shopify-payment-button__button, button.button {
+  background: #B85450 !important;
+  color: #ffffff !important;
+  border-color: #B85450 !important;
+}
+.button--secondary {
+  background: transparent !important;
+  color: #B85450 !important;
+  border-color: #B85450 !important;
+}
+a, .link { color: #B85450; }
+.header, .footer { background: #FEFCF9 !important; }
+
+/* === FORCE RTL FOR AR - all content starts right to left === */
+html[dir="rtl"] {
+  direction: rtl;
+}
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .header,
+html[dir="rtl"] .footer,
+html[dir="rtl"] main,
+html[dir="rtl"] section,
+html[dir="rtl"] .page-width,
+html[dir="rtl"] .collection,
+html[dir="rtl"] .product,
+html[dir="rtl"] .cart-drawer {
+  direction: rtl;
+}
+/* flip flex/grid alignment */
+html[dir="rtl"] .header__icons,
+html[dir="rtl"] .header__menu,
+html[dir="rtl"] .list-menu--inline {
+  flex-direction: row-reverse;
+}
+/* ensure buttons/icons mirrored */
+html[dir="rtl"] .button, html[dir="rtl"] .link {
+  direction: rtl;
+}

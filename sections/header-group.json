@@ -1,60 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "t:sections.header.name",
-    "type": "header",
-    "sections": {
-        "vitals_fc33c254": {
-            "type": "vitals-fc33c254",
-            "blocks": {
-                "announcement": {
-                    "type": "announcement",
-                    "settings": {
-                        "title": "\u0627\u0634\u062a\u0631\u0643 \u0641\u064a \u0646\u0634\u0631\u062a\u0646\u0627 \u0627\u0644\u0628\u0631\u064a\u062f\u064a\u0629 \u0648\u0627\u062d\u0635\u0644 \u0639\u0644\u0649 <strong>\u062e\u0635\u0645 10%<\/strong> \u0639\u0644\u0649 \u0623\u0648\u0644 \u0637\u0644\u0628 \u0644\u0643!",
-                        "text_link": "",
-                        "text_alternative_font": false,
-                        "text_font": "helvetica_n4"
-                    }
-                }
-            },
-            "block_order": [
-                "announcement"
-            ],
-            "name": "\ud83e\udde1 Vitals: Rotating Text Bar",
-            "settings": {
-                "rotating_bar_layout": "slider",
-                "rotating_bar_speed": "12",
-                "rotating_bar_height": "medium",
-                "section_background": "color",
-                "rotating_bar_background": "#B85450",
-                "section_gradient": "",
-                "text_size": "14",
-                "text_style": "regular",
-                "text_color": "#222222",
-                "vertical_margin": 0,
-                "vertical_margin_mobile": 0
-            }
-        },
-        "header": {
-            "type": "header",
-            "settings": {
-                "logo_position": "middle-left",
-                "mobile_logo_position": "center",
-                "menu": "main-menu",
-                "menu_type_desktop": "dropdown",
-                "sticky_header_type": "always",
-                "show_line_separator": true,
-                "color_scheme": "scheme-1",
-                "menu_color_scheme": "scheme-1",
-                "enable_country_selector": false,
-                "enable_language_selector": false,
-                "enable_customer_avatar": false,
-                "margin_bottom": 0,
-                "padding_top": 20,
-                "padding_bottom": 20
-            }
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
         }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-4f12eb26-efb4-465e-835d-1db3653cee18",
+        "show_line_separator": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
     },
-    "order": [
-        "vitals_fc33c254",
-        "header"
-    ]
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }

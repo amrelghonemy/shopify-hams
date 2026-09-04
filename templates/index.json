@@ -9,65 +9,130 @@
  */
 {
   "sections": {
-    "hero-banner": {
-      "type": "hero-banner",
+    "image_banner_97WkJf": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_taibLU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Style Made for You",
+            "heading_size": "h1"
+          }
+        },
+        "text_aaEmqq": {
+          "type": "text",
+          "settings": {
+            "text": "Discover the latest pieces curated to elevate your everyday style.",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_NXFfqk": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://collections",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_taibLU",
+        "text_aaEmqq",
+        "buttons_NXFfqk"
+      ],
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "hero_image": "",
-        "eyebrow": "",
-        "heading": "",
+        "image": "shopify://shop_images/photo-1483985988355-763728e1935b.avif",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
         "description": "",
-        "primary_button_label": "",
-        "primary_button_link": "",
-        "secondary_button_label": "",
-        "secondary_button_link": ""
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "parallelogram",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
       }
     },
-    "featured-categories": {
-      "type": "featured-categories",
+    "rich_text_KJgMyT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Q79GCE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elevate Your Everyday Style",
+            "heading_size": "h1"
+          }
+        },
+        "text_4AnWAn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Carefully curated pieces to suit every moment.</p>"
+          }
+        },
+        "button_fK49Ha": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Collection",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q79GCE",
+        "text_4AnWAn",
+        "button_fK49Ha"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "تسوقي حسب الفئة"
-      }
-    },
-    "new-arrivals": {
-      "type": "new-arrivals",
-      "settings": {
-        "title": "وصل حديثاً",
-        "collection": "",
-        "products_to_show": 4,
-        "view_all_label": "عرض الكل",
-        "view_all_link": ""
-      }
-    },
-    "promo-banner": {
-      "type": "promo-banner",
-      "settings": {
-        "tagline": "مجموعة حصرية",
-        "heading": "ارتقِ بإطلالتك اليومية",
-        "description": "قطع مختارة بعناية لتناسب كل لحظة.",
-        "button_label": "تسوقي الآن",
-        "button_link": ""
-      }
-    },
-    "why-us": {
-      "type": "why-us",
-      "settings": {
-        "title": "لماذا Hams Style"
-      }
-    },
-    "instagram-feed": {
-      "type": "instagram-feed",
-      "settings": {
-        "heading": "تابعينا على انستقرام",
-        "description": "للحديث عن أحدث صيحات الموضة"
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4f12eb26-efb4-465e-835d-1db3653cee18",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
-    "hero-banner",
-    "featured-categories",
-    "new-arrivals",
-    "promo-banner",
-    "why-us",
-    "instagram-feed"
+    "image_banner_97WkJf",
+    "featured_collection",
+    "rich_text_KJgMyT"
   ]
 }
