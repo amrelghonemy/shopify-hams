@@ -78,3 +78,52 @@ html[dir="rtl"] .list-menu--inline {
 html[dir="rtl"] .button, html[dir="rtl"] .link {
   direction: rtl;
 }
+
+/* === CUSTOM SECTION RTL - force ALL components RTL when ar === */
+html[dir="rtl"] * {
+  text-align: right;
+}
+html[dir="rtl"] .page-width,
+html[dir="rtl"] .shopify-section,
+html[dir="rtl"] .section,
+html[dir="rtl"] .card,
+html[dir="rtl"] .collection,
+html[dir="rtl"] .product,
+html[dir="rtl"] .product__info-wrapper,
+html[dir="rtl"] .footer__content,
+html[dir="rtl"] .header__inline-menu,
+html[dir="rtl"] .menu-drawer,
+html[dir="rtl"] .cart-drawer,
+html[dir="rtl"] .cart-items,
+html[dir="rtl"] .facets {
+  direction: rtl;
+  text-align: right;
+}
+/* flex/grid mirror */
+html[dir="rtl"] .grid,
+html[dir="rtl"] .header__icons,
+html[dir="rtl"] .header__menu,
+html[dir="rtl"] .list-menu--inline,
+html[dir="rtl"] .footer__blocks-wrapper,
+html[dir="rtl"] .card__content {
+  direction: rtl;
+}
+html[dir="rtl"] .header__icons {
+  flex-direction: row-reverse;
+}
+/* inputs/selects */
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  direction: rtl;
+  text-align: right;
+}
+/* keep numbers LTR */
+html[dir="rtl"] .price,
+html[dir="rtl"] .price *,
+html[dir="rtl"] [data-price] {
+  direction: ltr;
+  display: inline-block;
+  text-align: left;
+  unicode-bidi: embed;
+}
