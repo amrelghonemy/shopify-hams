@@ -108,3 +108,17 @@ html[dir="rtl"] .newsletter__subheading,
 html[dir="rtl"] .email-signup-banner__heading {
   text-align: right;
 }
+
+/* Title still LTR fix - force heading right for ar */
+html[dir="rtl"] .newsletter.center,
+html[dir="rtl"] .newsletter__wrapper h2,
+html[dir="rtl"] .inline-richtext,
+html[dir="rtl"] .email-signup-banner__heading {
+  text-align: right !important;
+  direction: rtl !important;
+}
+html[dir="rtl"] .banner__content--center,
+html[dir="rtl"] .banner--content-align-center {
+  justify-content: flex-end !important;
+  text-align: right !important;
+}
