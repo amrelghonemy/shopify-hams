@@ -50,35 +50,6 @@ body {
 a, .link { color: #B85450; }
 .header, .footer { background: #FEFCF9 !important; }
 
-/* === FORCE RTL FOR AR - all content starts right to left === */
-html[dir="rtl"] {
-  direction: rtl;
-}
-html[dir="rtl"] body {
-  direction: rtl;
-  text-align: right;
-}
-html[dir="rtl"] .header,
-html[dir="rtl"] .footer,
-html[dir="rtl"] main,
-html[dir="rtl"] section,
-html[dir="rtl"] .page-width,
-html[dir="rtl"] .collection,
-html[dir="rtl"] .product,
-html[dir="rtl"] .cart-drawer {
-  direction: rtl;
-}
-/* flip flex/grid alignment */
-html[dir="rtl"] .header__icons,
-html[dir="rtl"] .header__menu,
-html[dir="rtl"] .list-menu--inline {
-  flex-direction: row-reverse;
-}
-/* ensure buttons/icons mirrored */
-html[dir="rtl"] .button, html[dir="rtl"] .link {
-  direction: rtl;
-}
-
 /* Newsletter RTL - اشترك للحصول على آخر التحديثات starts from right */
 html[dir="rtl"] .newsletter,
 html[dir="rtl"] .newsletter__wrapper,
