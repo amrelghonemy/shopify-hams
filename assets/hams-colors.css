@@ -113,3 +113,17 @@ html[dir="rtl"] .rich-text__text {
   text-align: center !important;
   direction: ltr !important;
 }
+
+/* Image banner stay LTR even when ar */
+html[dir="rtl"] .banner,
+html[dir="rtl"] .banner__content,
+html[dir="rtl"] .banner__box,
+html[dir="rtl"] .banner__heading,
+html[dir="rtl"] .banner__text,
+html[dir="rtl"] .image-banner {
+  direction: ltr !important;
+  text-align: left !important;
+}
+html[dir="rtl"] .banner__buttons {
+  justify-content: flex-start !important;
+}
